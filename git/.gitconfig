@@ -41,3 +41,6 @@
 
 [url "https://bitbucket.org/"]
   insteadOf = bb:
+
+[credential]
+  helper = cache --timeout=28800
