@@ -30,13 +30,12 @@ call plug#begin(plugged_dir)
   Plug 'Shougo/denite.nvim'
   " Syntax
   " vim-plug
-  Plug 'elixir-editors/vim-elixir'
-  Plug 'elmcast/elm-vim'
   Plug 'pangloss/vim-javascript'
-  Plug 'elmcast/elm-vim'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'posva/vim-vue'
   Plug 'tpope/vim-markdown'
+  Plug 'elmcast/elm-vim'
+  Plug 'elixir-editors/vim-elixir'
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
   " Themes
@@ -46,6 +45,6 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/limelight.vim'
   " Misc
   Plug 'mhinz/vim-startify'
-  Plug 'beloglazov/vim-online-thesaurus'
+  " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()

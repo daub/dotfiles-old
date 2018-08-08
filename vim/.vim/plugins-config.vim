@@ -3,12 +3,11 @@ colorscheme hybrid
 " hi ColorColumn guibg=#1d1f21 guifg=#cc6666 ctermbg=black ctermfg=red
 hi Comment cterm=italic gui=italic
 
-
-
-" let g:airline_theme='base16_tomorrow'
-" " let g:airline_section_z = airline#section#create([''])
-" let g:airline_section_y = airline#section#create(['%2v'])
-" let g:airline#extensions#tabline#enabled = 1
+" Airline
+let g:airline_theme='base16_tomorrow'
+" let g:airline_section_z = airline#section#create([''])
+let g:airline_section_y = airline#section#create(['%2v'])
+let g:airline#extensions#tabline#enabled = 1
 
 let g:javascript_plugin_flow = 1
 let g:javascript_conceal_function             = "ƒ"
