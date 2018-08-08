@@ -1,0 +1,6 @@
+# Stream via torrents
+alias mpeer='peerflix --mpv'
+
+# Play audio from youtube (supports lists)
+alias mpyt='mpv --ytdl-raw-options=extract-audio=,audio-format=mp3,audio-quality=0'
+

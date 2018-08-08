@@ -1,0 +1,23 @@
+# Enable aliases to be sudo’ed
+#   http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
+alias sudo='sudo '
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# List
+alias ls='ls -F --color=auto'
+alias lsa='ls -a --color'
+
+# Copy with progress
+alias cp='rsync -ar --info=progress2'
+
+# Clipboard tools
+if [ command -v xclip >/dev/null 2>&1 ]; then
+  alias xcopy='xclip -selection clipboard'
+  alias xpaste='xclip -selection clipboard -o'
+fi
+
+# LuaRocks
+alias rock='luarocks --tree lua_modules'

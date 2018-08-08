@@ -1,0 +1,43 @@
+[include]
+  path = ~/.gitconfig.local
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[diff]
+  tool = vimdiff
+
+[color]
+  ui = auto
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+
+[alias]
+  l = log --oneline
+  lg = log --oneline --graph --decorate
+  s = status -s
+  #
+  cm = commit -m
+  cam = commit -a -m
+  #
+  co = checkout
+  cob = checkout -b
+  br = branch
+  brd = branch -d
+  # Amend the currently staged files to the latest commit
+  amend = commit --amend --reuse-message=HEAD
+  #
+  mnf = merge --no-ff
+
+[push]
+  default = simple
+
+[url "git://github.com/"]
+  insteadOf = gh:
+
+[url "https://bitbucket.org/"]
+  insteadOf = bb:

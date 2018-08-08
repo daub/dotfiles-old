@@ -1,0 +1,9 @@
+# VIM
+vim/.viminfo
+vim/.vim/plugged
+vim/.vim/.netrwhist
+vim/.vim/autoload/plug.vim
+vim/.vim/undo
+
+# ZSH
+zsh/.zsh/zplug

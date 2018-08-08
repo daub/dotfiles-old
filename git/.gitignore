@@ -1,0 +1,12 @@
+
+# tmp files #
+###################
+*.swp
+*.swo
+*~
+
+*.log
+
+# modules
+
+node_modules
