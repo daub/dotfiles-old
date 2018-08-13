@@ -4,10 +4,10 @@ colorscheme hybrid
 hi Comment cterm=italic gui=italic
 
 " Airline
-let g:airline_theme='base16_tomorrow'
+" let g:airline_theme='base16_tomorrow'
+" let g:airline_section_y = airline#section#create(['%2v'])
+" let g:airline#extensions#tabline#enabled = 1
 " let g:airline_section_z = airline#section#create([''])
-let g:airline_section_y = airline#section#create(['%2v'])
-let g:airline#extensions#tabline#enabled = 1
 
 let g:javascript_plugin_flow = 1
 let g:javascript_conceal_function             = "ƒ"

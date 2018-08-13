@@ -39,7 +39,7 @@ call plug#begin(plugged_dir)
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
   " Themes
-  " Plug 'chriskempson/base16-vim'
+  Plug 'chriskempson/base16-vim'
   " Focus
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
