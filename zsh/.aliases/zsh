@@ -9,6 +9,7 @@ alias ...='cd ../..'
 # List
 alias ls='ls -F --color=auto'
 alias lsa='ls -a --color'
+alias ll='ls -al --color'
 
 # Copy with progress
 alias cp='rsync -ar --info=progress2'
@@ -18,6 +19,3 @@ if [ command -v xclip >/dev/null 2>&1 ]; then
   alias xcopy='xclip -selection clipboard'
   alias xpaste='xclip -selection clipboard -o'
 fi
-
-# LuaRocks
-alias rock='luarocks --tree lua_modules'

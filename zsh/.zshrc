@@ -16,7 +16,3 @@ source ~/.zshrc.local
 source ~/.zsh/plugins.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
-
-# Swap escape
-
-setxkbmap -option caps:swapescape

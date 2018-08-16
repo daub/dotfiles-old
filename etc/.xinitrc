@@ -65,3 +65,6 @@ get_session(){
 
 exec $(get_session)
 
+# Swap escape
+
+# setxkbmap -option caps:swapescape
