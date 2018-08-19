@@ -28,3 +28,8 @@ nnoremap <Leader>9 :9b<CR>
 " splits
 nnoremap <Leader>\ :vsp<CR>
 nnoremap <Leader>- :sp<CR>
+
+" scrollwheel
+set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>

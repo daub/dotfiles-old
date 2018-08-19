@@ -1,2 +1,5 @@
+! For use with `setxkbmap -layout 'us(intl)'`
+
+! map CapsLock to Esc
 clear Lock
 keycode  66 = Escape NoSymbol Escape NoSymbol Escape
