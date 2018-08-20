@@ -1,17 +1,12 @@
-" colorscheme base16-tomorrow-night
-colorscheme hybrid
-" hi ColorColumn guibg=#1d1f21 guifg=#cc6666 ctermbg=black ctermfg=red
-hi Comment cterm=italic gui=italic
-
 " Airline
 " let g:airline_theme='base16_tomorrow'
 " let g:airline_section_y = airline#section#create(['%2v'])
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline_section_z = airline#section#create([''])
 
-let g:javascript_plugin_flow = 1
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
+let g:javascript_plugin_flow      = 1
+let g:javascript_conceal_function = "ƒ"
+let g:javascript_conceal_null     = "ø"
 
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
@@ -22,9 +17,8 @@ vmap <C-_> <leader>c<Space>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-
 " Markdown
-let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua']
+let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua'] " sdfsd fsd fsdf sdf
 
 " Distraction free
 function! s:goyo_enter()
