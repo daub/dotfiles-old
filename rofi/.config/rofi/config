@@ -18,13 +18,13 @@ rofi.tokenize: true
 rofi.auto-select: false
 
 ! When searching sort the result based on levenshtein distance.
-rofi.levenshtein-sort: false
+rofi.levenshtein-sort: true
 
 ! Enable the extended coloring options
 rofi.color-enabled: true
 
 ! Path to the new theme file format
-rofi.theme: lb
+rofi.theme: nord
 
 ! "Enabled modi" Set from: Default
 ! rofi.modi:                           window,run,ssh
