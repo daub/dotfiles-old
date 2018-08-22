@@ -59,7 +59,7 @@ font-2 = sm4tik:pixelsize=10;1
 
 modules-left = i3
 modules-center =  date weather
-modules-right =  xkeyboard wired-network wireless-network volume powermenu
+modules-right =  xkeyboard wired-network wireless-network pulseaudio-rofi-output powermenu
 
 ; tray-position = hidden
 tray-padding = 11
@@ -92,6 +92,21 @@ format-prefix = "    "
 format-suffix = "   "
 format-prefix-foreground = ${colors.foreground-alt}
 exec = python ~/.config/polybar/scripts/weather.py
+
+[module/pulseaudio-rofi-output]
+type = custom/script
+
+format = <label>
+format-prefix = "  "
+format-suffix = "  "
+format-background = ${colors.background-alt}
+
+exec = ~/.config/polybar/scripts/pulseaudio-rofi.sh --output_volume_listener
+tail = true
+click-right = ~/.config/polybar/scripts/pulseaudio-rofi.sh --output
+click-left = ~/.config/polybar/scripts/pulseaudio-rofi.sh --mute
+scroll-up =  ~/.config/polybar/scripts/pulseaudio-rofi.sh --volume_up
+scroll-down = ~/.config/polybar/scripts/pulseaudio-rofi.sh --volume_down
 
 
 [module/i3]
@@ -158,7 +173,6 @@ label-urgent = %name%
 label-urgent-foreground = #000000
 label-urgent-background = ${colors.background-alrt}
 label-urgent-padding = 4
-
 
 
 
