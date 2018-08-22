@@ -1,4 +1,5 @@
 all:
+	@stow i3
 	@stow termite
 	@stow tmux
 	@stow rofi
