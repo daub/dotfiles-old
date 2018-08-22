@@ -1,5 +1,6 @@
 all:
 	@stow i3
+	@stow polybar
 	@stow termite
 	@stow tmux
 	@stow rofi
