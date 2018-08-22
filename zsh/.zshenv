@@ -19,7 +19,7 @@ export EDITOR='vim'
 # make zsh/terminfo work for terms with application and cursor modes
 case "$TERM" in
     vte*|xterm*)
-        zle-line-init() { zle-keymap-select; echoti smkx }
+        zle-line-init() { echoti smkx }
         zle-line-finish() { echoti rmkx }
         zle -N zle-line-init
         zle -N zle-line-finish
