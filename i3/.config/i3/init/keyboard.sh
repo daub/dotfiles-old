@@ -8,6 +8,5 @@ setxkbmap \
   -option 'caps:escape'
 
 if [ -f $HOME/.Xmodmap ]; then
-#   xmodmap $HOME/.Xmodmap
+   xmodmap $HOME/.Xmodmap
 fi
-
