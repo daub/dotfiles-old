@@ -1,12 +1,13 @@
 #!/bin/sh
 
 setxkbmap \
+  -model thinkpadz60 \
   -layout us,am,ru \
   -variant ,phonetic-alt,phonetic \
-  -option 'grp:alt_shift_toggle' \
+  -option 'lctrl_lwin_toggle' \
   -option 'caps:escape'
 
 if [ -f $HOME/.Xmodmap ]; then
-    xmodmap $HOME/.Xmodmap
+#   xmodmap $HOME/.Xmodmap
 fi
 
