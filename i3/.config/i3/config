@@ -285,10 +285,7 @@ exec --no-startup-id xfce4-power-manager
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id xrdb $HOME/.Xresources
-exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/i3/init/keyboard.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 

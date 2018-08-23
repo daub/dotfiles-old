@@ -14,8 +14,6 @@ export MANPATH="~/.npm-packages/share/man:$(manpath)"
 
 export KEYTIMEOUT=1
 
-export EDITOR='vim'
-
 # make zsh/terminfo work for terms with application and cursor modes
 case "$TERM" in
     vte*|xterm*)

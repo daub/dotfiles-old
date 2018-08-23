@@ -1,5 +1,26 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/nano
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-# fix "xdg-open fork-bomb" export your preferred browser from here
-export BROWSER=/usr/bin/palemoon
+#
+export EDITOR=/usr/bin/vim
+export BROWSER=/usr/bin/firefox
+
+# Merge in defaults
+userresources=$HOME/.Xresources
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
+# Setup keyboard
+usermodmap=$HOME/.Xmodmap
+
+setxkbmap \
+  -model thinkpadz60 \
+  -layout us,am,ru \
+  -variant ,phonetic-alt,phonetic \
+  -option 'lctrl_lwin_toggle' \
+  -option 'caps:escape'
+
+if [ -f $usermodmap ]; then
+   xmodmap $usermodmap
+fi
