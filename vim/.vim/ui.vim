@@ -42,7 +42,8 @@ set cursorline
 set nostartofline
 
 " theme
-colorscheme base16-tomorrow-night
 
 hi Comment cterm=italic gui=italic
 hi ColorColumn guibg=#1d1f21 guifg=#cc6666 ctermbg=black ctermfg=red
+
+colorscheme base16-tomorrow-night
