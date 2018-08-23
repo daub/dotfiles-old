@@ -3,6 +3,9 @@ unbind C-b
 set -g prefix C-Space
 bind Space send-prefix
 
+# windows
+bind c new-window -c "#{pane_current_path}"
+
 # panes
 bind \ split-window -h -c '#{pane_current_path}'
 bind - split-window -v -c '#{pane_current_path}'
@@ -16,5 +19,8 @@ bind -n C-h if-shell "$is_vim" "send-keys C-h"  "select-pane -L"
 bind -n C-j if-shell "$is_vim" "send-keys C-j"  "select-pane -D"
 bind -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
 bind -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
+
+# extra
+bind r source-file ~/.tmux.conf
 
 # vim: ft=tmux
