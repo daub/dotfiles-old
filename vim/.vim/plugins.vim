@@ -26,11 +26,10 @@ call plug#begin(plugged_dir)
   Plug 'ConradIrwin/vim-bracketed-paste'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'ap/vim-buftabline'
+  " Plug 'ap/vim-buftabline'
   " Files
   Plug 'Shougo/denite.nvim'
   " Syntax
-  " vim-plug
   Plug 'pangloss/vim-javascript'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'posva/vim-vue'

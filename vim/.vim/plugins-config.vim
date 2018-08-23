@@ -1,8 +1,8 @@
 " Airline
 " let g:airline_theme='base16_tomorrow'
 " let g:airline_section_y = airline#section#create(['%2v'])
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_section_z = airline#section#create([''])
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_z = '%l:%c'
 
 let g:javascript_plugin_flow      = 1
 let g:javascript_conceal_function = "ƒ"
@@ -18,7 +18,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Markdown
-let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua'] " sdfsd fsd fsdf sdf
+let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua']
 
 " Distraction free
 function! s:goyo_enter()
