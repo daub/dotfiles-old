@@ -50,7 +50,7 @@ output_volume() {
      pacmd list-sinks | awk '/^\s+name: /{indefault = $2 == "'"<$(get_default_sink)>"'"}
              /^\s+muted: / && indefault {muted=$2}
              /^\s+volume: / && indefault {volume=$5}
-             END { print muted=="no"?"  "volume:"          " }'
+             END { print muted=="no"?"  "volume:"      " }'
 }
 
 get_default_source() {
