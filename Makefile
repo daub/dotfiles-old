@@ -2,7 +2,7 @@ all:
 	@stow system
 	@stow terminal
 	@stow desktop
-	@stow vim
-	@stow git
+	@stow assets
+	@stow devenv
 	@stow mpv
 	@stow etc

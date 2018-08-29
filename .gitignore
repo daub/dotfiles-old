@@ -1,9 +1,9 @@
 # VIM
-vim/.viminfo
-vim/.vim/plugged
-vim/.vim/.netrwhist
-vim/.vim/autoload/plug.vim
-vim/.vim/undo
+devenv/.viminfo
+devenv/.vim/plugged
+devenv/.vim/.netrwhist
+devenv/.vim/autoload/plug.vim
+devenv/.vim/undo
 
 # ZSH
-zsh/.zsh/zplug
+terminal/.zsh/zplug
