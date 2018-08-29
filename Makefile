@@ -4,5 +4,5 @@ all:
 	@stow desktop
 	@stow assets
 	@stow devenv
-	@stow mpv
-	@stow etc
+	@stow media
+	@stow misc
