@@ -1,5 +1,5 @@
 " Airline
-" let g:airline_theme='base16_tomorrow'
+" let g:airline_theme='nord'
 " let g:airline_section_y = airline#section#create(['%2v'])
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_z = '%l:%c'

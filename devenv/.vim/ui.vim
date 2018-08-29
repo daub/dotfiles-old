@@ -2,12 +2,12 @@
 set term=screen-256color
 set termguicolors
 
-set background=dark
+" set background=dark
 
-colorscheme hybrid
+colorscheme nord
 
 hi Comment cterm=italic gui=italic
-hi ColorColumn guibg=#1d1f21 guifg=#cc6666 ctermbg=black ctermfg=red
+hi ColorColumn guibg=#2e3440 guifg=#bf616a ctermbg=black ctermfg=red
 
 " syntax highlighting
 if !exists("g:syntax_on")
