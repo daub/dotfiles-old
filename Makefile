@@ -1,9 +1,7 @@
 all:
 	@stow system
-	@stow i3
-	@stow polybar
-	@stow rofi
 	@stow terminal
+	@stow desktop
 	@stow vim
 	@stow git
 	@stow mpv
