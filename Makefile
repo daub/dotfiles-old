@@ -3,9 +3,7 @@ all:
 	@stow i3
 	@stow polybar
 	@stow rofi
-	@stow termite
-	@stow tmux
-	@stow zsh
+	@stow terminal
 	@stow vim
 	@stow git
 	@stow mpv
