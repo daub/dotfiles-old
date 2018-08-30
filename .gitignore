@@ -7,3 +7,7 @@ devenv/.vim/undo
 
 # ZSH
 terminal/.zsh/zplug
+
+# Tmux
+terminal/.tmux/plugins
+!terminal/.tmux/plugins/tpm
