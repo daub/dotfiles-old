@@ -18,7 +18,7 @@ setxkbmap \
   -model thinkpadz60 \
   -layout us,am,ru \
   -variant ,phonetic-alt,phonetic \
-  -option 'lctrl_lwin_toggle' \
+  -option 'grp:shifts_toggle' \
   -option 'caps:escape'
 
 if [ -f $usermodmap ]; then
