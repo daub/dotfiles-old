@@ -15,7 +15,5 @@ alias ll='ls -al --color'
 alias cp='rsync -ar --info=progress2'
 
 # Clipboard tools
-if [ command -v xclip >/dev/null 2>&1 ]; then
-  alias xcopy='xclip -selection clipboard'
-  alias xpaste='xclip -selection clipboard -o'
-fi
+alias xcopy='xclip -selection clipboard'
+alias xpaste='xclip -selection clipboard -o'
