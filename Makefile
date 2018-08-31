@@ -4,8 +4,11 @@ all:
 	@stow desktop
 	@stow assets
 	@stow devenv
-	@stow media
 	@stow misc
+	@stow termite
 	@stow tmux
+	@stow zsh
 	@stow vim
+	@stow git
+	@stow mpv
 	@stow zathura
