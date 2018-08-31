@@ -6,6 +6,7 @@ all:
 	@stow devenv
 	@stow misc
 	@stow polybar
+	@stow nitrogen
 	@stow termite
 	@stow tmux
 	@stow zsh
