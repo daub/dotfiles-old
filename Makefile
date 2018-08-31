@@ -6,3 +6,6 @@ all:
 	@stow devenv
 	@stow media
 	@stow misc
+	@stow tmux
+	@stow vim
+	@stow zathura

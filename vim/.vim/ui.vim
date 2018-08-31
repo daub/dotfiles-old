@@ -1,6 +1,6 @@
 " true color
-set term=screen-256color
-set termguicolors
+" set term=screen-256color
+" set termguicolors
 
 " set background=dark
 

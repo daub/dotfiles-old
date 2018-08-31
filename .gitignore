@@ -1,12 +1,12 @@
 # VIM
-devenv/.viminfo
-devenv/.vim/plugged
-devenv/.vim/.netrwhist
-devenv/.vim/autoload/plug.vim
-devenv/.vim/undo
+vim/.viminfo
+vim/.vim/plugged
+vim/.vim/.netrwhist
+vim/.vim/autoload/plug.vim
+vim/.vim/undo
 
 # ZSH
 terminal/.zsh/zplug
 
 # Tmux
-terminal/.tmux/plugins
+tmux/.tmux/plugins
