@@ -1,21 +1,23 @@
 [colors]
-background = ${xrdb:color0:#111}
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+
+background-alt = ${xrdb:color7}
+background-unf = ${xrdb:color0}
 ;background = #212E36
 ;background = #FF0084
 ;it's ARGB so "cfl" is for transparency
-background-alt = #cf3C5A46
-background-unf = #cf2E463E
+; background-alt = #cf3C5A46
 background-mod0 = #cf3C5A46
 background-mod1 = #cf546E53
 background-mod2 = #cf708963
-background-alrt = #cfA1BB76
+background-alrt = #FF0084
 
-foreground = ${xrdb:color7:#dfdfdf}
 ;foreground = #F3F3BA
-foreground-alt = #F3F3BA
-primary = #FF0084
-secondary = #F3F3BA
+foreground-alt = ${xrdb:color0}
 
+primary = ${xrdn:color14}
+secondary = ${xrdn:color15}
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -30,7 +32,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
-line-color = #f00
+line-color = #ff0084
 
 border-size = 0
 border-color = #00000000
@@ -41,15 +43,14 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = DejaVu Sans Mono:size=9;1
-;font-0 = Ubuntu:size=10;1
+font-0 = DejaVu Sans Mono:size=10;1
 font-1 = FontAwesome:fontformat=truetype:size=12;1
 font-2 = sm4tik:pixelsize=10;1
 
 
 modules-left = i3
 modules-center = title
-modules-right =  xkeyboard wired-network wireless-network pulseaudio-rofi-output powermenu date
+modules-right =  xkeyboard wired-network wireless-network pulseaudio-rofi-output date
 
 ; tray-position = hidden
 tray-padding = 11
@@ -106,7 +107,7 @@ type = internal/i3
 label-unfocused-background = ${colors.background-unf}
 ;
 ;label-mode-padding = 0
-;label-mode-background = ${colors.background-unf}
+; label-mode-background = ${colors.background-unf}
 ;
 ;label-visible-underline = #555555
 ;label-visible-padding = 4
@@ -117,7 +118,7 @@ label-unfocused-background = ${colors.background-unf}
 ; Default: %mode%
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-background = #e60053
+label-mode-background = #FF0084
 
 ; Available tokens:
 ;   %name%
@@ -126,9 +127,9 @@ label-mode-background = #e60053
 ;   %output%
 ; Default: %icon%  %name%
 label-focused = %name%
-label-focused-foreground = #ffffff
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-background = ${colors.background-alt}
-label-focused-underline = #fba922
+; label-focused-underline = #fba922
 label-focused-padding = 2
 
 ; Available tokens:
@@ -185,9 +186,10 @@ interface = enp0s31f6
 interval = 3.0
 
 format-padding = 2
-
-format-connected-prefix = "  "
-label-connected = %local_ip%
+; format-connected-prefix = "  "
+;
+label-connected = " "
+; label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -217,7 +219,7 @@ label = %date% %time%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "  "
+format-prefix = " "
 
 format-padding = 2
 
@@ -234,58 +236,5 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-
-;
-; [module/filesystem]
-; type = internal/fs
-; interval = 25
-;
-; mount-0 = /
-;
-; label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-; label-unmounted = %mountpoint% not mounted
-; label-unmounted-foreground = ${colors.foreground-alt}
-;
-;
-;[module/xbacklight]
-;type = internal/xbacklight
-;
-;format = <label> <bar>
-;label = BL
-;
-;bar-width = 10
-;bar-indicator = |
-;bar-indicator-foreground = #ff
-;bar-indicator-font = 2
-;bar-fill = -
-;bar-fill-font = 2
-;bar-fill-foreground = #9f78e1
-;bar-empty = -
-;bar-empty-font = 2
-;bar-empty-foreground = ${colors.foreground-alt}
-;bar-empty-background = ${colors.foreground-mod}
-;
-;[module/backlight-acpi]
-;inherit = module/xbacklight
-;type = internal/backlight
-;card = intel_backlight
-;
-;[module/cpu]
-;type = internal/cpu
-;interval = 2
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-;format-prefix-background = ${colors.foreground-mod}
-;format-underline = #f90000
-;label = %percentage%%
-;
-;[module/memory]
-;type = internal/memory
-;interval = 2
-;format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-;format-underline = #4bffdc
-;label = %percentage_used%%
 
 ; vim:ft=dosini

@@ -5,6 +5,7 @@ all:
 	@stow assets
 	@stow devenv
 	@stow misc
+	@stow polybar
 	@stow termite
 	@stow tmux
 	@stow zsh
