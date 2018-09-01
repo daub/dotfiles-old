@@ -1,11 +1,11 @@
 all:
 	@stow system
-	@stow terminal
-	@stow desktop
-	@stow assets
-	@stow devenv
 	@stow misc
+	@stow assets
+	@stow i3
 	@stow polybar
+	@stow dunst
+	@stow rofi
 	@stow nitrogen
 	@stow termite
 	@stow tmux
