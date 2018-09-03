@@ -1,18 +1,7 @@
 #!/bin/bash
 
 # source surfraw config
-source $HOME/.surfraw.conf
-
-# load global files
-source /etc/rofi-surfraw.conf
-
-# create local copy of custom searchengines
-if [[ ! -d $HOME/.config/rofi-surfraw ]]; then
-    mkdir $HOME/.config/rofi-surfraw/searchengines 
-fi
-if [[ ! -f $HOME/.config/rofi-surfraw/searchengines ]]; then
-    cp /usr/share/doc/rofi-surfraw/searchengines $HOME/.config/rofi-surfraw/searchengines
-fi
+source $HOME/.config/surfraw/conf
 
 # get local config
 if [[ -f $HOME/.config/rofi-surfraw/config ]]; then
