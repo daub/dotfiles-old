@@ -14,3 +14,4 @@ all:
 	@stow git
 	@stow mpv
 	@stow zathura
+	@stow surfraw

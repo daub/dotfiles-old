@@ -1,8 +1,12 @@
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+export PATH="$PATH:$HOME/.scripts"
+
 #
 export EDITOR=/usr/bin/vim
 export BROWSER=/usr/bin/firefox
+
 
 # Merge in defaults
 userresources=$HOME/.Xresources
@@ -12,6 +16,7 @@ if [ -f "$userresources" ]; then
 fi
 
 # Setup keyboard
+
 usermodmap=$HOME/.Xmodmap
 
 setxkbmap \
