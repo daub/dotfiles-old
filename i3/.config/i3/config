@@ -3,6 +3,7 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod1
+set $super Mod4
 
 
 # set default desktop layout (default is tiling)
@@ -30,6 +31,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 bindsym $mod+Shift+Return exec termite -e "env TERM=screen-256color tmux"
+
+bindsym $mod+Shift+d exec termite -e "env TERM=screen-256color tmux" -r devenv
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -71,7 +74,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Ctrl+Delete --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -150,8 +153,8 @@ set $ws4 4
 set $ws5 5
 set $ws6 6
 set $ws7 7
-
 set $ws8 8
+set $ws9 9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -162,6 +165,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -172,6 +176,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -182,6 +187,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
@@ -189,10 +195,12 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 bindsym XF86Search exec rofi-surfraw
 # Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
+# assign [class="Firefox"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+assign [window_role="devenv"] $ws2
+assign [class="Firefox Developer Edition"] $ws2
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
