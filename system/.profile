@@ -24,8 +24,10 @@ setxkbmap \
   -layout us,am,ru \
   -variant ,phonetic-alt,phonetic \
   -option 'grp:shifts_toggle' \
-  -option 'caps:escape'
+  -option 'caps:ctrl_modifier'
 
 if [ -f $usermodmap ]; then
    xmodmap $usermodmap
 fi
+
+xcape -e 'Caps_Lock=Escape'
