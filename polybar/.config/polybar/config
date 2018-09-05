@@ -50,7 +50,7 @@ font-2 = sm4tik:pixelsize=10;1
 
 modules-left = i3
 modules-center = title
-modules-right =  xkeyboard wired-network wireless-network pulseaudio-rofi-output date
+modules-right =  xkeyboard wired-network wireless-network date
 
 ; tray-position = hidden
 tray-padding = 11
@@ -71,6 +71,19 @@ wm-restack = i3
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
+
+[bar/bottom]
+;monitor = ${env:MONITOR:HDMI-1}
+inherit = bar/top
+
+bottom = true
+
+modules-left = mpd-controls
+modules-center = mpd
+modules-right =  pulseaudio-rofi-output
+
+;wm-restack = bspwm
+wm-restack = i3
 
 [module/title]
 type = internal/xwindow
@@ -224,6 +237,35 @@ format-prefix = " "
 format-padding = 2
 
 label-layout = %layout%
+
+[module/mpd-controls]
+type = internal/mpd
+format-padding = 2
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-time>
+; <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next> <bar-progress>
+
+icon-prev = 
+; icon-seekb = 
+; icon-stop = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+; icon-seekf = 
+icon-next = 
+;
+;
+; label-song-maxlen = 64
+; label-song-ellipsis = true
+;
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song> <label-time>
+
+label-song =  %artist% - %title%
+label-song-maxlen = 70
+label-song-ellipsis = true
+
 
 [settings]
 screenchange-reload = true
