@@ -16,3 +16,4 @@ all:
 	@stow surfraw
 	@stow mpv
 	@stow mpd
+	@stow ncmpcpp
