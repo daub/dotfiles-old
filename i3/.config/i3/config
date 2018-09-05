@@ -245,6 +245,14 @@ exec_always --no-startup-id termite -t quake
 
 bindsym $mod+t [title="quake"] scratchpad show; [title="quake"] move position center
 
+
+for_window [title="dropdown-music"] floating enable
+for_window [title="dropdown-music"] resize set 640 460
+for_window [title="dropdown-music"] border pixel 2
+
+bindsym $mod+m exec --no-startup-id termite -t dropdown-music -e ncmpcpp
+
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

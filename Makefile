@@ -12,6 +12,8 @@ all:
 	@stow zsh
 	@stow vim
 	@stow git
-	@stow mpv
 	@stow zathura
 	@stow surfraw
+	@stow mpv
+	@stow mpd
+	@stow ncmpcpp
