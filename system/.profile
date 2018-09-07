@@ -5,7 +5,7 @@ export PATH="$PATH:$HOME/.scripts"
 
 #
 export EDITOR=/usr/bin/vim
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/surf
 
 
 # Merge in defaults
