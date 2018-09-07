@@ -61,7 +61,7 @@ XTerm*faceSize:          11
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
-! Xcursor.theme: xcursor-breeze
+! Xcursor.theme: Adwaita
 Xcursor.size:                     0
 
 URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono

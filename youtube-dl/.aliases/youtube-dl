@@ -1,0 +1,2 @@
+alias yt='youtube-dl'
+alias yt-mp3='youtube-dl -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0'

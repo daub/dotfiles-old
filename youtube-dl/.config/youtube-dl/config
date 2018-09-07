@@ -1,0 +1,9 @@
+# Save under Downloads directory
+
+-o ~/Downloads/%(title)s-%(id)s.%(ext)s
+
+# Meta
+--embed-subs
+--embed-thumbnail
+--add-metadata
+--xattrs

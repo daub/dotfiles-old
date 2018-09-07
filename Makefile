@@ -14,6 +14,7 @@ all:
 	@stow git
 	@stow zathura
 	@stow surfraw
-	@stow mpv
 	@stow mpd
 	@stow ncmpcpp
+	@stow mpv
+	@stow youtube-dl
