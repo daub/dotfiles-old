@@ -1,0 +1,19 @@
+#!/bin/env sh
+
+# This script move the selected window to the bottom right of the screen.
+
+gap=40
+
+current=$(xdotool getwindowfocus)
+
+xmax=$(xdotool getdisplaygeometry | awk '{print $1}')
+ymax=$(xdotool getdisplaygeometry | awk '{print $2}')
+
+width=$((xmax / 3))
+height=$((ymax / 3))
+
+top=$((ymax - height - gap))
+left=$((xmax - width - gap))
+
+xdotool windowsize $current $width $height
+xdotool windowmove $current $left $top
