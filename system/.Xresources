@@ -65,6 +65,11 @@ XTerm*selectToClipboard: true
 ! Xcursor.theme: Adwaita
 Xcursor.size:                     0
 
+dmenu.selforeground: #d8dee8
+dmenu.background: #2f343f
+dmenu.selbackground: #bf616a
+dmenu.foreground: #d8dee8
+
 URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 
 ! alternative font settings with 'terminus':
