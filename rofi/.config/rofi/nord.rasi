@@ -1,18 +1,22 @@
+/* vim:ft=css */
+
 * {
-    backgroundcolor: #2e3440;
-    bg1: #3b4252;
-    backgroundcoloralternate: #2e3440;
+    background: #2e3440;
+    background-alt: #2e3440;
+
+    foreground: #839496;
+    foreground-alt: #839496;
+    foreground-mute: #4c566a;
+
     separatorcolor: #3b4252;
     scrollbarcolor: #3b4252;
-    foregroundcolor: #839496;
-    foregroundcolorinverse: #839496;
     selectioncolor: #3b4252;
 
 
     font-size: 1px;
     border-color: @separatorcolor;
-    background-color: @backgroundcolor;
-    text-color: @foregroundcolor;
+    background-color: @background;
+    text-color: @foreground;
     margin: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -28,7 +32,7 @@
 }
 
 #window {
-    background-color: @backgroundcolor;
+    background-color: @background;
     border-color: @separatorcolor;
     border: 1;
     border-radius: 2px;
@@ -37,19 +41,19 @@
 #mainbox {
     border: 0;
     padding: 0;
-    background-color: @backgroundcoloralternate;
+    background-color: @background;
 }
 
 #element {
     padding: 16;
     border: 0 0 1 0;
     border-color: @separatorcolor;
-    background-color: @backgroundcoloralternate;
+    background-color: @background-alt;
 }
 
 #element.selected.normal {
     background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
+    text-color: @foreground-alt;
     border-radius: 0px;
 
     border: 0 0 1 0;
@@ -57,7 +61,7 @@
 }
 
 #element.alternate.normal {
-    background-color: @backgroundcoloralternate;
+    background-color: @background-alt;
 }
 
 #element.normal.active {
@@ -70,7 +74,7 @@
 
 #element.selected.active {
     background-color: @selectioncolor;
-    text-color: @foregroundcolorinverse;
+    text-color: @foreground-alt;
     border-radius: 0px;
 
     border: 0 0 1 0;
@@ -86,7 +90,7 @@
 
 #prompt {
     padding: 16;
-    background-color: @backgroundcoloralternate;
+    background-color: @background-alt;
     border: 0 1 0 0;
 }
 
@@ -99,10 +103,15 @@
     width: 8px;
     handle-color: @scrollbarcolor;
     handle-width: 8px;
-    background-color: @backgroundcoloralternate;
+    background-color: @background-alt;
 }
 
 #scrollbar handle {
     border: 1px;
     border-color: #ff0000;
+}
+
+#textbox {
+  padding: 16;
+  text-color: @foreground-mute;
 }
