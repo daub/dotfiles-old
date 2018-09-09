@@ -1,22 +1,5 @@
 #!/bin/bash
 
-# source surfraw config
-source $HOME/.config/surfraw/conf
-
-# get local config
-if [[ -f $HOME/.config/rofi-surfraw/config ]]; then
-    source $HOME/.config/rofi-surfraw/config
-fi
-
-query=""
-
-# get list of search engines from surfraw
-if [[ $@ == *"--no-list"* ]]; then
-    elvis=$(ls ~/.config/surfraw/elvi)
-else
-#    elvis=$(sr -elvi | awk '{ print "?"$1 }' | tail -n +2)
-    elvis=$(sr -elvi | awk '{if (NR!=1) print $1 }')
-fi
 
 # append_history () {
 #   echo $* >> ~/.surfraw-history
@@ -34,13 +17,36 @@ get_query () {
   fi
 }
 
+get_elvi () {
+  # Draw Menu
+  ELVI_MSG="Search for <b>"${query}"</b>"
+
+  # get list of search engines from surfraw
+  elvis=$(
+    sr -elvi |
+    awk '/^\w/ { print $0 }' |
+    sed 's/--/<small>/' |
+    sed 's/$/ <\/small>/'
+  )
+
+  elvi=$(
+    echo -e "${elvis}" |
+    rofi \
+      -dmenu \
+      -i \
+      -no-custom \
+      -auto-select \
+      -markup-rows \
+      -matching normal \
+      -mesg "${ELVI_MSG}" \
+      -p "Search: " |
+    awk '{print $1}'
+  )
+}
+
 main () {
   get_query $*
-
-# Draw Menu
-  ELVI_MSG="Search for <b>"${query}"</b>"
-  ROFI_CMD=''
-  elvi=$(echo -e "${default}\n${elvis}" | rofi -dmenu -i -no-custom -auto-select -mesg "${ELVI_MSG}" -p "Search: ")
+  get_elvi
 
   # Some logic
   if [[ $elvi == "" ]]; then
@@ -51,11 +57,7 @@ main () {
 }
 
 if [[ $1 == "--help" ]]; then
-    echo "rofi-surfraw - (C) 2015 Rasmus Steinke <rasi at xssn dot at>"
-    echo "---"
-    echo "--help         this help"
-    echo "--no-list      do not show inbuild search engines"
-    echo "--no-custom    do not show custom search engines"
+  echo "rofi-surfraw"
 else
-    main ""
+  main ""
 fi
