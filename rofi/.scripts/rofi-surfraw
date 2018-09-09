@@ -1,75 +1,63 @@
 #!/bin/bash
 
-# source surfraw config
-source $HOME/.config/surfraw/conf
 
-# get local config
-if [[ -f $HOME/.config/rofi-surfraw/config ]]; then
-    source $HOME/.config/rofi-surfraw/config
-fi
+# append_history () {
+#   echo $* >> ~/.surfraw-history
+#   cat ~/.surfraw-history | uniq | tail -n 100 > ~/.surfraw-history.next
+#   mv ~/.surfraw-history.next ~/.surfraw-history
+# }
 
-# get list of search engines from surfraw
-if [[ $@ == *"--no-list"* ]]; then
+get_query () {
+  query=$(rofi -dmenu -p "Search: " -lines 0)
+
+  if [[ $query == "" ]]; then exit
+  else
     :
-else
-#    list=$(sr -elvi | awk '{ print "?"$1 }' | tail -n +2)
-    list=$(sr -elvi | awk '{if (NR!=1) print "?"$1 }')
-fi
+    # append_history $query
+  fi
+}
 
-# get custom engines from text file
-if [[ $@ == *"--no-custom"* ]]; then
-    :
-else
-#    custom=$(cat $HOME/.config/rofi-surfraw/searchengines | awk -F ' - ' '{ print $1 }')
-    custom=$(awk -F ' - ' '{ print $1 }' $HOME/.config/rofi-surfraw/searchengines)
-fi
+get_elvi () {
+  # Draw Menu
+  ELVI_MSG="Search for <b>"${query}"</b>"
+
+  # get list of search engines from surfraw
+  elvis=$(
+    sr -elvi |
+    awk '/^\w/ { print $0 }' |
+    sed 's/--/<small>/' |
+    sed 's/$/ <\/small>/'
+  )
+
+  elvi=$(
+    echo -e "${elvis}" |
+    rofi \
+      -dmenu \
+      -i \
+      -no-custom \
+      -auto-select \
+      -markup-rows \
+      -matching normal \
+      -mesg "${ELVI_MSG}" \
+      -p "Search: " |
+    awk '{print $1}'
+  )
+}
 
 main () {
-# Draw Menu
-HELP_MSG="<span color=\"$help_color\">Hit Ctrl+Space to complete Engine Name
-Searches without prepended engine use "${default}"</span>"
-elvi=$(echo -e "${list}\n${custom}" | rofi -dmenu -mesg "${HELP_MSG}" -p "Search > ")
+  get_query $*
+  get_elvi
 
-# Some logic
-if [[ $elvi == "" ]]; then exit
-elif [[ $elvi == "!"* ]]; then
-    entry=$(grep "$(echo "${elvi}" | awk '{ print $1 }')" "$HOME/.config/rofi-surfraw/searchengines")
-    method=$(echo "${entry}" | awk -F ' - ' '{ print $2 }')
-    bang=$(echo "${entry}" | awk -F ' - ' '{ print $3 }')
-    search=$(echo "${elvi}" | awk '{$1=""; print $0}' | cut -c 2-)
-    if [[ $method == "surfraw" ]]; then
-        sr ${bang} ${search}
-    elif [[ $method == "custom" ]]; then
-        "$SURFRAW_graphical_browser" $SURFRAW_graphical_browser_args ${bang}"${search}"
-    fi
-elif [[ $elvi == "?"* ]]; then
-    name=$(echo "${elvi}" | awk '{ print $1 }' | cut -c 2-)
-    search=$(echo "${elvi}" | awk '{$1=""; print $0}' | cut -c 2-)
-    sr ${name} ${search}
-else
-    if [[ $default == "!"* ]]; then
-        entry=$(grep "$(echo "${default}" | awk '{ print $1 }')" "$HOME/.config/rofi-surfraw/searchengines")
-        method=$(echo "${entry}" | awk -F ' - ' '{ print $2 }')
-        bang=$(echo "${entry}" | awk -F ' - ' '{ print $3 }')
-    else
-        method="surfraw"
-        bang="$default"
-    fi
-    search="${elvi}"
-    if [[ $method == "surfraw" ]]; then
-        sr ${bang} ${search}
-    elif [[ $method == "custom" ]]; then
-        "$SURFRAW_graphical_browser" $SURFRAW_graphical_browser_args ${bang}"${search}"
-    fi
-fi
+  # Some logic
+  if [[ $elvi == "" ]]; then
+    main $query
+  else
+    sr ${elvi} ${query}
+  fi
 }
 
 if [[ $1 == "--help" ]]; then
-    echo "rofi-surfraw - (C) 2015 Rasmus Steinke <rasi at xssn dot at>"
-    echo "---"
-    echo "--help         this help"
-    echo "--no-list      do not show inbuild search engines"
-    echo "--no-custom    do not show custom search engines"
+  echo "rofi-surfraw"
 else
-    main
+  main ""
 fi

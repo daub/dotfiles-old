@@ -24,7 +24,7 @@ rofi.levenshtein-sort: true
 rofi.color-enabled: true
 
 ! Path to the new theme file format
-rofi.theme: nord
+rofi.theme: themes/nord
 
 ! "Enabled modi" Set from: Default
 ! rofi.modi:                           window,run,ssh
