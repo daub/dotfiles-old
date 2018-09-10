@@ -13,6 +13,7 @@ all:
 	@stow vim
 	@stow git
 	@stow zathura
+	@stow vimb
 	@stow surfraw
 	@stow mpd
 	@stow ncmpcpp
