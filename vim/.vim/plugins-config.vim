@@ -42,7 +42,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Zoom
-nnoremap <Leader>z :Goyo<CR>
+nnoremap <Leader>= :Goyo<CR>
 
 " Misc
 nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>

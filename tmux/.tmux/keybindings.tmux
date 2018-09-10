@@ -12,6 +12,10 @@ bind - split-window -v -c '#{pane_current_path}'
 unbind '"'
 unbind %
 
+unbind =
+unbind z
+bind = resize-pane -Z
+
 # switch panes using ctrl-hjkl without prefix
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
