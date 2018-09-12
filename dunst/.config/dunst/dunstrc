@@ -320,5 +320,10 @@
 #    summary = *twitter.com*
 #    urgency = normal
 #
-# vim: ft=cfg
 
+[mpd]
+    appname = mpd
+    summary = "now playing"
+    urgency = low
+
+# vim: ft=cfg

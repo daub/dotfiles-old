@@ -13,14 +13,6 @@ mpc_format() {
   mpc -f "${args[0]}" current
 }
 
-# Get album art
-# ffmpeg -y -i "${XDG_MUSIC_DIR%%/}/$(mpc current --format '%file%')" \
-#   "$ALBUM_ART" 2>/dev/null &&\
-#   mogrify -resize "$ALBUM_ART_WIDTH" "$ALBUM_ART"
-#
-# # Get the dunstify id
-# [ ! -z "$(cat "$DUNSTIFY_ID")" ] && id_arg="-r $(cat "$DUNSTIFY_ID")"
-
 title="$(mpc_format "$FMT_TITLE")"
 artist="$(mpc_format "$FMT_ARTIST")"
 
@@ -28,10 +20,8 @@ artist="$(mpc_format "$FMT_ARTIST")"
 title="${title/#-/−}"
 artist="${artist/#-/−}"
 
-echo $title
+art_src=$(mpc-art)
 
-notify-send "${title}" ${artist}
+notify-send "${title}" ${artist} \
   -a "ncmpcpp" \
-  -i "/tmp/album-art.png"
-  # -p $id_arg > "$DUNSTIFY_ID" \
-  # "$title" "$artist"
+  -i "{art_src}"
