@@ -16,6 +16,7 @@ all:
 	@stow vimb
 	@stow surfraw
 	@stow mpd
+	@stow mpc
 	@stow ncmpcpp
 	@stow mpv
 	@stow youtube-dl

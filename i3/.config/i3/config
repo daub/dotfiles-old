@@ -61,7 +61,7 @@ bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
 bindsym $mod+Shift+F2 exec firefox --private-window
 bindsym $mod+F3 exec termite -e ranger
@@ -134,11 +134,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 #move the currently focused window to the scratchpad
-bindsym $mod+z move scratchpad
+# bindsym $mod+z move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+0 scratchpad show; floating toggle
+# bindsym $mod+0 scratchpad show; floating toggle
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+l workspace next
@@ -235,18 +235,19 @@ for_window [class="Xfburn"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
 
-# First I have a tmux window used for background scripts.
-# I'll later bind this to mod+u.
-for_window [title="quake"] floating enable
-for_window [title="quake"] resize set 640 460
-for_window [title="quake"] move scratchpad
-for_window [title="quake"] border pixel 2
-# Runs the tmuxinit script, which searches for an earlier tmux title,
-# otherwise starts a new one (to prevent multiple dropdown sessions).
-exec_always --no-startup-id termite -t quake
-
-bindsym $mod+t [title="quake"] scratchpad show; [title="quake"] move position center
-
+#
+# # First I have a tmux window used for background scripts.
+# # I'll later bind this to mod+u.
+# for_window [title="quake"] floating enable
+# for_window [title="quake"] resize set 640 460
+# for_window [title="quake"] move scratchpad
+# for_window [title="quake"] border pixel 2
+# # Runs the tmuxinit script, which searches for an earlier tmux title,
+# # otherwise starts a new one (to prevent multiple dropdown sessions).
+# exec_always --no-startup-id termite -t quake
+#
+# bindsym $mod+t [title="quake"] scratchpad show; [title="quake"] move position center
+#
 
 for_window [title="dropdown-music"] floating enable
 for_window [title="dropdown-music"] resize set 640 460

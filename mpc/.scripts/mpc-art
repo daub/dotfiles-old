@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# Display album art in term, auto-change on song change
+# Note that this will make your cursor invisible. Restore with `tput cnorm`
+# metakirby5
+
+# CHARHEIGHT=31
+# CHARWIDTH=15
+# PAD=0
+
+ALBUM_ART="/tmp/album-art.png"
+NO_ART="/tmp/no-album-art.png"
+
+convert -size 1 xc:transparent "$NO_ART"
+
+get_art() {
+  rm "$ALBUM_ART" &>/dev/null
+
+  # Get album art
+  ffmpeg -y -i "${HOME}/Music/$(mpc current --format '%file%')" \
+    "$ALBUM_ART" 2>/dev/null
+
+  echo $ALBUM_ART
+}
+
+# Initial display
+# clear
+# tput civis
+# get_art && display_art
+
+# Connect to socket
+exec 3<> /dev/tcp/localhost/6600
+
+get_art
+
+# Enter message loop
+# while read -u3 msg; do
+#   # If we got an OK
+#   if [[ "$msg" == OK* ]]; then
+#     # Check if the song changed
+#     song="$(mpc current)"
+#
+#     echo $song
+#
+#     if [[ "$song" != "$last" ]]; then
+#       get_art
+#       display_art
+#     fi
+#
+#     last="$song"
+#
+#     # Listen for next change
+#     echo 'idle player playlist' >&3
+#   fi
+# done &
+
+# Also display on screen size change
+# prev_width="$(tput cols)"
+# prev_height="$(tput lines)"
+# while true; do
+#   width="$(tput cols)"
+#   height="$(tput lines)"
+#   [[ "$width" != "$prev_width" || "$height" != "$prev_height" ]] \
+#     && display_art
+#   prev_width="$width"
+#   prev_height="$height"
+#   sleep 1
+# done &
+
+# Also display on keypress
+# while read -rsn1; do
+#   display_art
+# done
