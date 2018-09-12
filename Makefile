@@ -20,3 +20,4 @@ all:
 	@stow ncmpcpp
 	@stow mpv
 	@stow youtube-dl
+	@stow aria2
