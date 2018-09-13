@@ -18,6 +18,7 @@ all:
 	@stow mpd
 	@stow mpc
 	@stow ncmpcpp
+	@stow beets
 	@stow mpv
 	@stow youtube-dl
 	@stow aria2

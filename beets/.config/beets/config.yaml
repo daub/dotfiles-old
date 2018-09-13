@@ -1,0 +1,20 @@
+library: ~/.local/share/beets/library.db
+
+# asciify_paths: yes
+
+ui:
+  color: yes
+
+import:
+  move: yes
+
+paths:
+  default: $albumartist/$album/$title
+  singleton: $artist/Singles/$title
+
+plugins: edit chroma mpdupdate
+
+mpd:
+  host: localhost
+  port: 6600
+
