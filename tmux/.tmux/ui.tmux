@@ -34,11 +34,12 @@ set -g status-justify left
 
 # Left
 set -g status-left "" # "#[fg=black,bg=blue,bold] #S "
-set -g status-right "#{prefix_highlight} #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore] #[fg=black,bg=cyan,bold] #H "
+set -g status-right "#{prefix_highlight}"
+# set -g status-right "#{prefix_highlight} #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore] #[fg=black,bg=cyan,bold] #H "
 
 #+--- Windows ---+
-set -g window-status-format "#[fg=brightblue,bg=brightblack] #I #[noitalics]#W "
-set -g window-status-current-format "#[fg=black,bg=brightcyan] #I #[fg=black,bg=brightcyan]#W "
+set -g window-status-format "#[fg=brightblue,bg=black] #[noitalics]#W "
+set -g window-status-current-format "#[fg=black,bg=brightcyan] #[fg=black,bg=brightcyan]#W "
 set -g window-status-separator " "
 
 # Plugin support

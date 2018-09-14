@@ -3,6 +3,9 @@ unbind C-b
 set -g prefix C-Space
 bind Space send-prefix
 
+# make semicolon behave like colon
+bind-key \; command-prompt
+
 # windows
 bind c new-window -c "#{pane_current_path}"
 

@@ -1,7 +1,10 @@
 " Airline
 " let g:airline_theme='nord'
-" let g:airline_section_y = airline#section#create(['%2v'])
+" let g:airline_section_y = airline#section#create(['mode', '', 'branch'])
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_a = ''
+let g:airline_section_b = ''
+let g:airline_section_y = ''
 let g:airline_section_z = '%l:%c'
 
 let g:javascript_plugin_flow      = 1
