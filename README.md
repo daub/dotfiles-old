@@ -46,3 +46,8 @@ make
 - audio player - mpd + mpc + ncmpcpp
 - video player - mpv
 - PDF viewer - zathura
+
+### Personal
+
+- music collection - beets
+- accounting - ledger
