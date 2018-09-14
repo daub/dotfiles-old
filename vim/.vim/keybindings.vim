@@ -25,6 +25,9 @@ nnoremap <Leader>7 :7b<CR>
 nnoremap <Leader>8 :8b<CR>
 nnoremap <Leader>9 :9b<CR>
 
+nnoremap H :bprevious<CR>
+nnoremap L :bnext<CR>
+
 " splits
 nnoremap <Leader>\ :vsp<CR>
 nnoremap <Leader>- :sp<CR>
