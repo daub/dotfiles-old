@@ -1,0 +1,2 @@
+# Display balance
+alias led='ledger -f ${HOME}/Documents/finances/main.ledger'

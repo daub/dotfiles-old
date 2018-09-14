@@ -38,6 +38,7 @@ call plug#begin(plugged_dir)
   Plug 'elixir-editors/vim-elixir'
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
+  Plug 'ledger/vim-ledger'
   " Themes
   Plug 'arcticicestudio/nord-vim'
   Plug 'chriskempson/base16-vim'

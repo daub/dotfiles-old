@@ -45,7 +45,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 nnoremap <Leader>= :Goyo<CR>
 
 " Misc
-nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>
+" nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>
 
 " Fuzzy finder
 
@@ -58,3 +58,7 @@ nnoremap <Leader>b :Denite -auto-resize -highlight-mode-insert=Visual buffer<cr>
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
 nnoremap <silent> <Leader>d ?function<cr>:noh<cr>:JsDoc<cr>
+
+" Ledger
+" au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
+" au FileType ledger autocmd BufWritePre <buffer> call LedgerAlign()

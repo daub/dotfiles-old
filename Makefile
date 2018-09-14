@@ -22,3 +22,4 @@ all:
 	@stow mpv
 	@stow youtube-dl
 	@stow aria2
+	@stow ledger
