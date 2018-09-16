@@ -24,6 +24,10 @@ nmap ga <Plug>(EasyAlign)
 let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua']
 
 " Distraction free
+
+let g:limelight_conceal_ctermfg=8
+" let g:limelight_conceal_guifg='#88C0D0'
+
 function! s:goyo_enter()
   silent !tmux set status off
   silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
@@ -44,7 +48,6 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-" Zoom
 nnoremap <Leader>= :Goyo<CR>
 
 " Misc
