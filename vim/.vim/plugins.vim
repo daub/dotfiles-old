@@ -31,6 +31,7 @@ call plug#begin(plugged_dir)
   Plug 'Shougo/denite.nvim'
   " Syntax
   Plug 'pangloss/vim-javascript'
+  Plug 'kshenoy/vim-signature'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'posva/vim-vue'
   Plug 'tpope/vim-markdown'
