@@ -31,3 +31,6 @@ if [ -f $usermodmap ]; then
 fi
 
 xcape -e 'Caps_Lock=Escape'
+
+# mpd daemon
+mpd
