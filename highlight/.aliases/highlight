@@ -1,0 +1,2 @@
+# With "nord" theme
+alias highlight='highlight -s nord'

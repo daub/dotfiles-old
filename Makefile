@@ -23,3 +23,4 @@ all:
 	@stow youtube-dl
 	@stow aria2
 	@stow ledger
+	@stow highlight
