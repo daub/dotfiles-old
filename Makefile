@@ -24,3 +24,4 @@ all:
 	@stow aria2
 	@stow ledger
 	@stow highlight
+	@stow ranger
