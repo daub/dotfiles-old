@@ -1,4 +1,4 @@
-DOTS = \
+DOTFILES ?= \
 	system \
 	misc \
 	assets \
@@ -30,11 +30,11 @@ DOTS = \
 
 # Install
 
-install: $(DOTS:%=install-%)
+install: $(DOTFILES:%=install-%)
 
 install-vim:
 	stow -R vim
-	vim +PlugInstall +qall
+	@vim +PlugInstall +qall
 
 install-zsh:
 	stow -R zsh
