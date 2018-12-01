@@ -5,6 +5,7 @@ alias sudo='sudo '
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # List
 alias ls='ls -F --color=auto'

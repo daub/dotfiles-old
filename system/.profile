@@ -4,8 +4,8 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export PATH="$PATH:$HOME/.scripts"
 
 #
-export EDITOR=/usr/bin/vim
-export BROWSER=/usr/bin/vimb
+export EDITOR=vim
+export BROWSER=vimb
 
 
 # Merge in defaults

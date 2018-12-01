@@ -9,6 +9,8 @@ zplug 'plugins/git', from:oh-my-zsh
 zplug 'plugins/colored-man-pages', from:oh-my-zsh
 zplug 'plugins/fancy-ctrl-z', from:oh-my-zsh
 
+zplug "plugins/vi-mode", from:oh-my-zsh
+
 zplug 'mafredri/zsh-async', from:github
 zplug 'sindresorhus/pure', use:pure.zsh, from:github, as:theme
 

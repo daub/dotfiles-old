@@ -25,3 +25,5 @@ all:
 	@stow ledger
 	@stow highlight
 	@stow ranger
+	@stow npm
+	@stow pass

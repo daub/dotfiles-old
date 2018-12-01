@@ -1,1 +1,44 @@
 set selection-clipboard clipboard
+
+set window-icon ~/.local/share/icons/zathura.png
+
+set adjust-open "width"
+set page-padding 2
+
+# theme
+set font "Dejavu Sans Mono 12"
+
+set default-bg              "#151515" #00
+set default-fg              "#E0E0E0" #01
+
+set statusbar-bg            "#202020" #01
+set statusbar-fg            "#B0B0B0" #04
+
+set inputbar-bg             "#151515" #00 currently not used
+set inputbar-fg             "#B0B0B0" #02
+
+set notification-error-bg   "#AC4142" #08
+set notification-error-fg   "#151515" #00
+
+set notification-warning-bg "#F4BF75" #08  old: #AC4142
+set notification-warning-fg "#151515" #00
+
+set highlight-color         "#F4BF75" #0A
+set highlight-active-color  "#6A9FB5" #0D
+
+set completion-highlight-bg "#75B5AA" #0C
+set completion-highlight-fg "#303030" #02
+
+set completion-bg           "#303030" #02
+set completion-fg           "#75B5AA" #0C
+
+set index-bg                "" #02
+set index-fg                "#75B5AA" #0C
+set index-active-bg         "#75B5AA" #0C
+set index-active-fg         "#303030" #02
+
+set notification-bg         "#00BCD4" #0B old: "#90A959"
+set notification-fg         "#151515" #00
+
+set recolor-lightcolor      "#151515" #00
+set recolor-darkcolor       "#E0E0E0" #06 "#7fffd4"
