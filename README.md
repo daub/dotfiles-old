@@ -2,11 +2,8 @@
 
 ## Install
 
-Requires GNU Stow
+Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
-```sh
-make
-```
 ## Contents
 
 ### Platform

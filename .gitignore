@@ -1,12 +1,1 @@
-# VIM
-vim/.viminfo
-vim/.vim/plugged
-vim/.vim/.netrwhist
-vim/.vim/autoload/plug.vim
-vim/.vim/undo
 
-# ZSH
-terminal/.zsh/zplug
-
-# Tmux
-tmux/.tmux/plugins
