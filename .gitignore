@@ -9,4 +9,5 @@ vim/.vim/undo
 terminal/.zsh/zplug
 
 # Tmux
-tmux/.tmux/plugins
+tmux/.tmux/plugins/
+!tmux/.tmux/plugins/index.tmux

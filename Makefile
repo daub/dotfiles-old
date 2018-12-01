@@ -41,6 +41,7 @@ install-zsh:
 
 install-tmux:
 	stow -R tmux
+	echo "Don't forget to install plugins in Tmux"
 
 install-%: %
 	stow -R $^
