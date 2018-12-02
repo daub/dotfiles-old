@@ -26,7 +26,8 @@ DOTFILES ?= \
 	highlight \
 	ranger \
 	npm \
-	pass
+	pass \
+	gnupg
 
 # Install
 
