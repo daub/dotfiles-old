@@ -50,4 +50,4 @@
   prompt = false
 
 [commit]
-  gpgSign = true
+  ; gpgSign = true
