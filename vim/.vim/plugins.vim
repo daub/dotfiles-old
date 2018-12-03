@@ -47,6 +47,7 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   " Misc
+  Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
   " Plug 'beloglazov/vim-online-thesaurus'
 
