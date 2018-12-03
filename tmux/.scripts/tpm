@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+
+USAGE="Usage: tpm install [plugin] [plugin]"
+
+run_install() {
+  local cmd="$CURRENT_DIR/tpm-install"
+  $cmd $@
+}
+
+if [ "$#" == "0" ]; then
+  echo "$USAGE"
+  exit 1
+fi
+
+if test "$1" = "install"; then
+  run_install ${@:2}
+else
+  echo $USAGE
+fi
