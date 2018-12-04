@@ -53,6 +53,9 @@ nnoremap <Leader>= :Goyo<CR>
 " Misc
 " nnoremap <Leader>t :OnlineThesaurusCurrentWord<CR>
 
+" Vimux
+let g:VimuxUseNearest = 0
+
 " Fuzzy finder
 
 call denite#custom#var('file_rec', 'command',

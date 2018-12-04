@@ -18,6 +18,7 @@ set -g display-panes-colour black
 set -g display-panes-active-colour brightblack
 
 # Clock Mode
+
 setw -g clock-mode-colour cyan
 
 # Messages
@@ -43,6 +44,7 @@ set -g window-status-current-format "#[fg=black,bg=brightcyan] #[fg=black,bg=bri
 set -g window-status-separator " "
 
 # Plugin support
+
 set -g @prefix_highlight_fg black
 set -g @prefix_highlight_bg brightcyan
 

@@ -1,11 +1,6 @@
-if "test ! -d ~/.tmux/plugins/tpm" \
-   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && cd ~/.tmux/plugins/tpm/bin/ && source install_plugins'"
-
-set -g @tpm_plugins "                \
-  tmux-plugins/tpm                   \
-  tmux-plugins/tmux-prefix-highlight \
-"
-
-run -b '~/.tmux/plugins/tpm/tpm'
-
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-copycat'
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+set -g @plugin 'tmux-plugins/tmux-urlview'
+set -g @plugin 'tmux-plugins/tpm'
 # vim: ft=tmux

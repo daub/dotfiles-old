@@ -19,15 +19,30 @@ unbind =
 unbind z
 bind = resize-pane -Z
 
-# switch panes using ctrl-hjkl without prefix
-is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
-    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
-bind -n C-h if-shell "$is_vim" "send-keys C-h"  "select-pane -L"
-bind -n C-j if-shell "$is_vim" "send-keys C-j"  "select-pane -D"
-bind -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
-bind -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
+unbind M-1
+unbind M-2
+unbind M-3
+unbind M-4
+# unbind M-5
+bind-key -T prefix | select-layout main-vertical\; resize-pane -t 0 -R 60
+bind-key -T prefix _ select-layout tiled
 
-# extra
+# switch windows using prefix-hjkl
+unbind l
+bind-key -T prefix       l                 next-window
+bind-key -T prefix       h                 previous-window
+
+bind-key -T prefix Q kill-pane
+unbind x
+
+# vi mode
+set-window-option -g mode-keys vi
+
+bind-key -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send-keys -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+bind-key -T copy-mode-vi Escape send -X cancel
+
+# reload config
 bind r source-file ~/.tmux.conf
 
 # vim: ft=tmux

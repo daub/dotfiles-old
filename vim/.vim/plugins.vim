@@ -22,6 +22,8 @@ call plug#begin(plugged_dir)
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'benmills/vimux'
+  Plug 'fishman/vimux-repl'
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'
   Plug 'vim-airline/vim-airline'
