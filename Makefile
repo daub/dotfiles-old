@@ -20,6 +20,7 @@ DOTFILES ?= \
 	ncmpcpp \
 	beets \
 	mpv \
+	streamlink \
 	youtube-dl \
 	aria2 \
 	ledger \
