@@ -1,0 +1,5 @@
+config/.viminfo
+config/.vim/plugged
+config/.vim/.netrwhist
+config/.vim/autoload/plug.vim
+config/.vim/undo

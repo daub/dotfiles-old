@@ -1,5 +1,6 @@
-DOTFILES ?= \
+PACKAGES ?= \
 	editorconfig \
+	misc \
 	system \
 	misc \
 	assets \
@@ -31,24 +32,31 @@ DOTFILES ?= \
 	pass \
 	gnupg
 
+PACKAGES_DIR ?= packages
+DIST_DIR ?= dist
+
+build: $(DIST_DIR) $(PACKAGES:%=config/%)
+	@echo $(+F)
+
+$(DIST_DIR):
+	@mkdir $(DIST_DIR) -p
+	@mkdir $(DIST_DIR)/.config -p
+	@mkdir $(DIST_DIR)/.local/share/applications -p
+	@mkdir $(DIST_DIR)/.local/share/icons -p
+	@mkdir $(DIST_DIR)/.aliases -p
+	@mkdir $(DIST_DIR)/.scripts -p
+
+config/%: $(PACKAGES_DIR)/%
+	@stow $(@D) \
+		-d $(PACKAGES_DIR)/$* \
+		-t $(DIST_DIR)
+
 # Install
 
-install: $(DOTFILES:%=install-%)
-
-install-vim:
-	stow -R vim
-	@vim +PlugInstall +qall
-
-install-zsh:
-	stow -R zsh
-
-install-tmux:
-	stow -R tmux
-
-install-%: %
-	stow -R $^
+install: $(DIST_DIR)
+	@stow -R $<
 
 # Uninstall
 
-uninstall: $(DOTS)
+uninstall: $(DOTFILES)
 	@stow -D $^
