@@ -1,4 +1,5 @@
 DOTFILES ?= \
+	editorconfig \
 	system \
 	misc \
 	assets \
