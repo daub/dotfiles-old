@@ -14,23 +14,22 @@ let plugged_dir = $HOME . "/.vim/plugged"
 
 call plug#begin(plugged_dir)
 
-  Plug 'editorconfig/editorconfig-vim'
+  " From tpope
+  Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'tpope/vim-vinegar'
+  " From junegunn
   Plug 'junegunn/vim-easy-align'
-  Plug 'michaeljsmith/vim-indent-object'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'christoomey/vim-tmux-navigator'
-  Plug 'benmills/vimux'
-  Plug 'fishman/vimux-repl'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'ConradIrwin/vim-bracketed-paste'
+  Plug 'junegunn/fzf', { 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/goyo.vim'
+  Plug 'junegunn/limelight.vim'
+  " UI
+  Plug 'arcticicestudio/nord-vim'
+  Plug 'chriskempson/base16-vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  " Plug 'ap/vim-buftabline'
-  " Files
-  Plug 'Shougo/denite.nvim'
   " Syntax
   Plug 'pangloss/vim-javascript'
   Plug 'kshenoy/vim-signature'
@@ -42,15 +41,19 @@ call plug#begin(plugged_dir)
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
   Plug 'ledger/vim-ledger'
-  " Themes
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'chriskempson/base16-vim'
-  " Focus
-  Plug 'junegunn/goyo.vim'
-  Plug 'junegunn/limelight.vim'
+  " Editing
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'ConradIrwin/vim-bracketed-paste'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'michaeljsmith/vim-indent-object'
+  Plug 'terryma/vim-multiple-cursors'
   " Misc
+  Plug 'editorconfig/editorconfig-vim'
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'benmills/vimux'
+  Plug 'fishman/vimux-repl'
   " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()
