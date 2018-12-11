@@ -54,6 +54,7 @@ call plug#begin(plugged_dir)
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'benmills/vimux'
   Plug 'fishman/vimux-repl'
+  Plug 'ryanoasis/vim-devicons'
   " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()
