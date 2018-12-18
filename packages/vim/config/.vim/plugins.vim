@@ -41,6 +41,8 @@ call plug#begin(plugged_dir)
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
   Plug 'ledger/vim-ledger'
+  Plug 'mxw/vim-jsx'
+  Plug 'w0rp/ale'
   " Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'
