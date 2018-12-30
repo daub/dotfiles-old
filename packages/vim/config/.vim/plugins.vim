@@ -34,6 +34,7 @@ call plug#begin(plugged_dir)
   Plug 'pangloss/vim-javascript'
   Plug 'kshenoy/vim-signature'
   Plug 'heavenshell/vim-jsdoc'
+  Plug 'othree/jsdoc-syntax.vim'
   Plug 'posva/vim-vue'
   Plug 'tpope/vim-markdown'
   Plug 'elmcast/elm-vim'

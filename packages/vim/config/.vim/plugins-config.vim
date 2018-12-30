@@ -90,9 +90,9 @@ nnoremap <Leader>n :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 
 " JSDoc
-let g:jsdoc_input_description = 1
+let g:jsdoc_input_description = 0
 let g:jsdoc_enable_es6 = 1
-nnoremap <silent> <Leader>d ?function<cr>:noh<cr>:JsDoc<cr>
+nmap <silent> <Leader>d <Plug>(jsdoc)
 
 " Ale
 let g:ale_lint_on_text_changed = 'never'
