@@ -1,7 +1,10 @@
 PACKAGES ?= \
-	fzf \
+	aria2 \
+	assets \
+	beets \
 	dunst \
 	editorconfig \
+	fzf \
 	git \
 	gnupg \
 	highlight \
