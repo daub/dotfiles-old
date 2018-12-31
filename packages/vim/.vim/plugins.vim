@@ -34,6 +34,7 @@ call plug#begin(plugged_dir)
   Plug 'pangloss/vim-javascript'
   Plug 'kshenoy/vim-signature'
   Plug 'heavenshell/vim-jsdoc'
+  Plug 'othree/jsdoc-syntax.vim'
   Plug 'posva/vim-vue'
   Plug 'tpope/vim-markdown'
   Plug 'elmcast/elm-vim'
@@ -41,6 +42,8 @@ call plug#begin(plugged_dir)
   Plug 'kylef/apiblueprint.vim'
   Plug 'digitaltoad/vim-pug'
   Plug 'ledger/vim-ledger'
+  Plug 'mxw/vim-jsx'
+  Plug 'w0rp/ale'
   " Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'
@@ -54,6 +57,7 @@ call plug#begin(plugged_dir)
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'benmills/vimux'
   Plug 'fishman/vimux-repl'
+  Plug 'ryanoasis/vim-devicons'
   " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()

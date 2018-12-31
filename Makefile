@@ -1,54 +1,60 @@
-DOTFILES ?= \
-	editorconfig \
-	system \
-	misc \
-	assets \
-	i3 \
-	polybar \
+PACKAGES ?= \
+	fzf \
 	dunst \
-	rofi \
-	nitrogen \
-	termite \
-	tmux \
-	zsh \
-	vim \
+	editorconfig \
 	git \
-	zathura \
-	vimb \
-	surfraw \
-	mpd \
-	mpc \
-	ncmpcpp \
-	beets \
-	mpv \
-	streamlink \
-	youtube-dl \
-	aria2 \
-	ledger \
+	gnupg \
 	highlight \
-	ranger \
+	i3 \
+	ledger \
+	misc \
+	misc \
+	mpc \
+	mpd \
+	mpv \
+	ncmpcpp \
+	nitrogen \
 	npm \
 	pass \
-	gnupg
+	polybar \
+	ranger \
+	rofi \
+	streamlink \
+	surfraw \
+	system \
+	termite \
+	tmux \
+	vim \
+	vimb \
+	youtube-dl \
+	zathura \
+	zsh
+
+PACKAGES_DIR ?= packages
+DIST_DIR ?= dist
+
+build: $(DIST_DIR) $(PACKAGES:%=config/%)
+	@echo $(+F)
+
+$(DIST_DIR):
+	@mkdir $(DIST_DIR) -p
+	@mkdir $(DIST_DIR)/.config -p
+	@mkdir $(DIST_DIR)/.local/share/applications -p
+	@mkdir $(DIST_DIR)/.local/share/icons -p
+	@mkdir $(DIST_DIR)/.aliases -p
+	@mkdir $(DIST_DIR)/.scripts -p
+
+config/%: $(PACKAGES_DIR)/%
+	@stow $(@F) \
+		-d $(PACKAGES_DIR) \
+		-t $(DIST_DIR)
 
 # Install
 
-install: $(DOTFILES:%=install-%)
-
-install-vim:
-	stow -R vim
-	@vim +PlugInstall +qall
-
-install-zsh:
-	stow -R zsh
-
-install-tmux:
-	stow -R tmux
-
-install-%: %
-	stow -R $^
+install: $(DIST_DIR)
+	@stow -R $<
 
 # Uninstall
 
-uninstall: $(DOTS)
+uninstall: $(DOTFILES)
 	@stow -D $^

@@ -2,7 +2,7 @@ typeset -U path
 # local binaries
 path=(~/bin:~/.local/bin $path)
 # node modules
-path=(~/.npm-packages/bin $path)
+path=($path ~/.npm-packages/bin)
 
 typeset -U fpath
 fpath=(~/.zsh/functions, $fpath)

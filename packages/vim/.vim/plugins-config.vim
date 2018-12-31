@@ -4,8 +4,15 @@
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_a = ''
 let g:airline_section_b = ''
+let g:airline_section_x = ''
 let g:airline_section_y = ''
 let g:airline_section_z = '%l:%c'
+
+"
+let g:webdevicons_enable_airline_tabline = 0
+let g:webdevicons_enable_airline_statusline = 1
+
+"
 
 let g:javascript_plugin_flow      = 1
 let g:javascript_conceal_function = "ƒ"
@@ -83,9 +90,15 @@ nnoremap <Leader>n :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 
 " JSDoc
-let g:jsdoc_input_description = 1
+let g:jsdoc_input_description = 0
 let g:jsdoc_enable_es6 = 1
-nnoremap <silent> <Leader>d ?function<cr>:noh<cr>:JsDoc<cr>
+nmap <silent> <Leader>d <Plug>(jsdoc)
+
+" Ale
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '◦'
 
 " Ledger
 " au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
