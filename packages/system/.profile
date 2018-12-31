@@ -5,7 +5,6 @@ export PATH="$PATH:$HOME/.scripts"
 
 #
 export EDITOR=vim
-export BROWSER=vimb
 
 
 # Merge in defaults
@@ -31,6 +30,3 @@ if [ -f $usermodmap ]; then
 fi
 
 xcape -e 'Caps_Lock=Escape'
-
-# mpd daemon
-mpd

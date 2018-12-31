@@ -4,6 +4,12 @@ for aliasfile in ~/.aliases/*; do
   fi
 done
 
+for exportfile in ~/.exports/*; do
+  if [ -f "$exportfile" ]; then
+    source "$exportfile"
+  fi
+done
+
 # If you come from bash you might have to change your $PATH.
 # ssh
 export SSH_KEY_PATH='~/.ssh/rsa_id'
