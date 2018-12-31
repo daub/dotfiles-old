@@ -22,6 +22,7 @@ PACKAGES ?= \
 	polybar \
 	ranger \
 	rofi \
+	ssh \
 	streamlink \
 	surfraw \
 	system \
