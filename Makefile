@@ -1,36 +1,33 @@
 PACKAGES ?= \
-	editorconfig \
-	misc \
-	system \
-	misc \
-	assets \
-	i3 \
-	polybar \
 	dunst \
-	rofi \
-	nitrogen \
-	termite \
-	tmux \
-	zsh \
-	vim \
+	editorconfig \
 	git \
-	zathura \
-	vimb \
-	surfraw \
-	mpd \
-	mpc \
-	ncmpcpp \
-	beets \
-	mpv \
-	streamlink \
-	youtube-dl \
-	aria2 \
-	ledger \
+	gnupg \
 	highlight \
-	ranger \
+	i3 \
+	ledger \
+	misc \
+	misc \
+	mpc \
+	mpd \
+	mpv \
+	ncmpcpp \
+	nitrogen \
 	npm \
 	pass \
-	gnupg
+	polybar \
+	ranger \
+	rofi \
+	streamlink \
+	surfraw \
+	system \
+	termite \
+	tmux \
+	vim \
+	vimb \
+	youtube-dl \
+	zathura \
+	zsh
 
 PACKAGES_DIR ?= packages
 DIST_DIR ?= dist
@@ -47,8 +44,8 @@ $(DIST_DIR):
 	@mkdir $(DIST_DIR)/.scripts -p
 
 config/%: $(PACKAGES_DIR)/%
-	@stow $(@D) \
-		-d $(PACKAGES_DIR)/$* \
+	@stow $(@F) \
+		-d $(PACKAGES_DIR) \
 		-t $(DIST_DIR)
 
 # Install
