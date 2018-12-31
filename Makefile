@@ -1,4 +1,5 @@
 PACKAGES ?= \
+	fzf \
 	dunst \
 	editorconfig \
 	git \
