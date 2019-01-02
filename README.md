@@ -33,7 +33,8 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 ### Web
 
-- browser - surf, vimb
+- browser - Firefox, vimb
+- bookmark manager - Buku
 - email client - 
 - RSS reader -
 - chat client - 

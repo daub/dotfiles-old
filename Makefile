@@ -2,6 +2,7 @@ PACKAGES ?= \
 	aria2 \
 	assets \
 	beets \
+	buku \
 	dunst \
 	editorconfig \
 	fzf \

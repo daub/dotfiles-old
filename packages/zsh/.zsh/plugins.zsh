@@ -22,6 +22,16 @@ zplug "junegunn/fzf-bin", \
   from:github, \
   rename-to:"fzf"
 
+# Use the package as a command
+# And accept glob patterns (e.g., brace, wildcard, ...)
+zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+
+zplug "carnager/buku_run", \
+  from:github, \
+  as:command, \
+  use:"buku_run", \
+  rename-to:rofi-buku
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
