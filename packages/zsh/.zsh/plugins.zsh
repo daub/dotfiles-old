@@ -8,7 +8,6 @@ source $ZPLUG_HOME/init.zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/fancy-ctrl-z", from:oh-my-zsh
-
 zplug "plugins/vi-mode", from:oh-my-zsh
 
 zplug "mafredri/zsh-async", from:github
@@ -22,9 +21,9 @@ zplug "junegunn/fzf-bin", \
   from:github, \
   rename-to:"fzf"
 
-# Use the package as a command
-# And accept glob patterns (e.g., brace, wildcard, ...)
-zplug "Jxck/dotfiles", as:command, use:"bin/{histuniq,color}"
+zplug "jarun/Buku", \
+  from:github, \
+  as:command
 
 zplug "carnager/buku_run", \
   from:github, \
