@@ -23,7 +23,8 @@ zplug "junegunn/fzf-bin", \
 
 zplug "jarun/Buku", \
   from:github, \
-  as:command
+  as:command, \
+  use:"buku"
 
 zplug "carnager/buku_run", \
   from:github, \
