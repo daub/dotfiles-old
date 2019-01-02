@@ -4,6 +4,12 @@ for aliasfile in ~/.aliases/*; do
   fi
 done
 
+for functionfile in ~/.functions/*; do
+  if [ -f "$functionfile" ]; then
+    source "$functionfile"
+  fi
+done
+
 # Navigation
 setopt auto_cd
 

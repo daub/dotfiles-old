@@ -1,0 +1,16 @@
+## Functions
+add_auth_key () {
+  ssh-copy-id $@
+}
+
+# Tree fallback
+if [ -z "\${which tree}" ]; then
+  tree () {
+    find $@ -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  }
+fi
+
+# make a dir and cd into it
+mcd () {
+  mkdir -p "$@" && cd "$@"
+}
