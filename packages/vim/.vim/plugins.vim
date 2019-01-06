@@ -46,8 +46,7 @@ call plug#begin(plugged_dir)
   Plug 'frigoeu/psc-ide-vim'
   Plug 'raichoo/purescript-vim'
   " Linting
-  " Plug 'w0rp/ale'
-  Plug 'vim-syntastic/syntastic'
+  Plug 'w0rp/ale'
   Plug 'metakirby5/codi.vim'
   " Editing
   Plug 'scrooloose/nerdcommenter'

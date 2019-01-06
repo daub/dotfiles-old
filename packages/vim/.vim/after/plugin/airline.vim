@@ -3,7 +3,7 @@
 
 " Extensions
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#syntastic#enabled = 0
 
 " Sections
 let g:airline_section_a = ''
