@@ -54,6 +54,7 @@ call plug#begin(plugged_dir)
   Plug 'jiangmiao/auto-pairs'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'matze/vim-move'
   " Misc
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jamessan/vim-gnupg'

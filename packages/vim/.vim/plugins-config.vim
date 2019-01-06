@@ -61,3 +61,4 @@ nmap <silent> <Leader>d <Plug>(jsdoc)
 " Ledger
 " au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
 " au FileType ledger autocmd BufWritePre <buffer> call LedgerAlign()
+let g:move_key_modifier = 'C'

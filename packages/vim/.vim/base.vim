@@ -57,4 +57,7 @@ set expandtab
 " folding.
 set foldmethod=manual
 
+" completion
+set completeopt+=longest
+
 filetype indent on
