@@ -30,6 +30,7 @@ call plug#begin(plugged_dir)
   Plug 'chriskempson/base16-vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'ryanoasis/vim-devicons'
   " Syntax
   Plug 'pangloss/vim-javascript'
   Plug 'kshenoy/vim-signature'
@@ -47,7 +48,6 @@ call plug#begin(plugged_dir)
   Plug 'raichoo/purescript-vim'
   " Linting
   Plug 'w0rp/ale'
-  Plug 'metakirby5/codi.vim'
   " Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'
@@ -59,9 +59,8 @@ call plug#begin(plugged_dir)
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
   Plug 'christoomey/vim-tmux-navigator'
+  " REPL-like
   Plug 'benmills/vimux'
-  Plug 'fishman/vimux-repl'
-  Plug 'ryanoasis/vim-devicons'
   " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()
