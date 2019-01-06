@@ -43,7 +43,12 @@ call plug#begin(plugged_dir)
   Plug 'digitaltoad/vim-pug'
   Plug 'ledger/vim-ledger'
   Plug 'mxw/vim-jsx'
+  Plug 'frigoeu/psc-ide-vim'
+  Plug 'raichoo/purescript-vim'
+  " Linting
   Plug 'w0rp/ale'
+  Plug 'vim-syntastic/syntastic'
+  Plug 'metakirby5/codi.vim'
   " Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'

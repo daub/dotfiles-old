@@ -2,6 +2,7 @@
 " let g:airline_theme='nord'
 " let g:airline_section_y = airline#section#create(['mode', '', 'branch'])
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline_section_a = ''
 let g:airline_section_b = ''
 let g:airline_section_x = ''
@@ -99,6 +100,26 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '◦'
+
+" Syntactic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
+
+let syntastic_error_symbol = '•'
+let syntastic_style_error_symbol = '•'
+let syntastic_warning_symbol = '◦'
+let syntastic_style_warning_symbol = '◦'
 
 " Ledger
 " au BufNewFile,BufRead *.ldg,*.ledger setf ledger | comp ledger
