@@ -18,7 +18,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Markdown
-let g:markdown_fenced_languages = ['python', 'bash=sh', 'js=javascript', 'lua']
+let g:markdown_fenced_languages = [ 'python', 'bash=sh', 'js=javascript', 'lua', 'purs=purescript' ]
 
 " Distraction free
 

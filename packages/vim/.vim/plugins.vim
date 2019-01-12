@@ -33,7 +33,6 @@ call plug#begin(plugged_dir)
   Plug 'ryanoasis/vim-devicons'
   " Syntax
   Plug 'pangloss/vim-javascript'
-  Plug 'kshenoy/vim-signature'
   Plug 'heavenshell/vim-jsdoc'
   Plug 'othree/jsdoc-syntax.vim'
   Plug 'posva/vim-vue'
@@ -44,7 +43,6 @@ call plug#begin(plugged_dir)
   Plug 'digitaltoad/vim-pug'
   Plug 'ledger/vim-ledger'
   Plug 'mxw/vim-jsx'
-  Plug 'frigoeu/psc-ide-vim'
   Plug 'raichoo/purescript-vim'
   " Linting
   Plug 'w0rp/ale'
@@ -55,13 +53,12 @@ call plug#begin(plugged_dir)
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'matze/vim-move'
+  Plug 'kshenoy/vim-signature'
   " Misc
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
   Plug 'christoomey/vim-tmux-navigator'
-  " REPL-like
-  Plug 'benmills/vimux'
   " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()

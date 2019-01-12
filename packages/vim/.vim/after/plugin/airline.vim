@@ -4,6 +4,7 @@
 " Extensions
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#ale#enabled = 1
 
 " Sections
 let g:airline_section_a = ''
