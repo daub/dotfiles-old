@@ -31,6 +31,7 @@ PACKAGES ?= \
 	tmux \
 	vim \
 	vimb \
+	weechat \
 	youtube-dl \
 	zathura \
 	zsh

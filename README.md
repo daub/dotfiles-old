@@ -35,9 +35,12 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 - browser - Firefox, vimb
 - bookmark manager - Buku
-- email client - 
 - RSS reader -
-- chat client - 
+
+### Communication
+
+- email client - 
+- chat client - WeeChat
 
 ### Media
 
