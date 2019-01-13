@@ -4,6 +4,7 @@ let g:webdevicons_enable_airline_statusline = 1
 
 "
 
+
 let g:javascript_plugin_flow      = 1
 let g:javascript_conceal_function = "ƒ"
 let g:javascript_conceal_null     = "ø"
@@ -18,7 +19,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Markdown
-let g:markdown_fenced_languages = [ 'python', 'bash=sh', 'js=javascript', 'lua', 'purs=purescript' ]
+let g:markdown_fenced_languages = [ 'python', 'bash=sh', 'js=javascript', 'lua', 'purs=purescript', 'purescript' ]
 
 " Distraction free
 
