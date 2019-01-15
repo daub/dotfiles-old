@@ -8,6 +8,8 @@
 
 #### Aliases
 
+Consider adding local alias if using *pass*
+
 ```sh
 alias chat='WEECHAT_PASSPHRASE=$(pass $(id -un)/weechat) weechat'
 ```
