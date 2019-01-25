@@ -1,6 +1,8 @@
 " true color
-" set term=screen-256color
-" set termguicolors
+let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+
+set termguicolors
 
 " set background=dark
 
@@ -13,9 +15,6 @@ hi ColorColumn guibg=#2e3440 guifg=#bf616a ctermbg=black ctermfg=red
 if !exists("g:syntax_on")
   syntax enable
 endif
-
-let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
-let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 
 filetype plugin on
 
