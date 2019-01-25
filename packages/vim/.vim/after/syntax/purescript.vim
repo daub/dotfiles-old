@@ -15,4 +15,8 @@ syntax match purescriptOperatorFunction '\\' conceal cchar=λ
 syntax keyword purescriptType Int conceal cchar=ℤ
 syntax keyword purescriptType Number conceal cchar=ℝ
 
+syn match purescriptDocComment "-- |-*\([^-!#$%&\*\+./<=>\?@\\^|~].*\)\?$" contains=@Spell
+
+hi purescriptDocComment cterm=NONE ctermbg=NONE ctermfg=3
+
 hi Conceal cterm=italic ctermbg=NONE ctermfg=darkblue
