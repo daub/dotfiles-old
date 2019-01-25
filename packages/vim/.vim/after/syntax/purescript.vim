@@ -1,22 +1,25 @@
-syntax keyword purescriptForall forall conceal cchar=∀
+syn keyword purescriptForall forall conceal cchar=∀
 
-syntax match purescriptOperatorType '::' conceal cchar=∷
-syntax match purescriptOperatorTypeSig '->' conceal cchar=→
-syntax match purescriptOperatorTypeSig '<-' conceal cchar=←
-syntax match purescriptOperatorTypeSig '=>' conceal cchar=⇒
-syntax match purescriptOperatorTypeSig '<=' conceal cchar=⇐
+syn match purescriptOperatorType '::' conceal cchar=∷
+syn match purescriptOperatorTypeSig '->' conceal cchar=→
+syn match purescriptOperatorTypeSig '<-' conceal cchar=←
+syn match purescriptOperatorTypeSig '=>' conceal cchar=⇒
+syn match purescriptOperatorTypeSig '<=' conceal cchar=⇐
 
-syntax match keyword '<=' conceal cchar=≤
-syntax match keyword '>=' conceal cchar=≥
+syn match keyword '<=' conceal cchar=≤
+syn match keyword '>=' conceal cchar=≥
 
 " syntax match purescriptFunctionDecl '\\' conceal cchar=λ
-syntax match purescriptOperatorFunction '\\' conceal cchar=λ
+syn match purescriptOperatorFunction '\\' conceal cchar=λ
 
-syntax keyword purescriptType Int conceal cchar=ℤ
-syntax keyword purescriptType Number conceal cchar=ℝ
+syn keyword pursType Int conceal cchar=ℤ
+syn keyword pursType Number conceal cchar=ℝ
 
-syn match purescriptDocComment "-- |-*\([^-!#$%&\*\+./<=>\?@\\^|~].*\)\?$" contains=@Spell
+syn match pursDoc contained '.*'
+syn match pursDocOpen contained '-- |'
+syn match pursDocLine /^-- |.*$/ contains=pursDocOpen,pursDoc
 
-hi purescriptDocComment cterm=NONE ctermbg=NONE ctermfg=3
+hi pursDoc cterm=italic ctermbg=NONE ctermfg=8
+hi pursDocOpen cterm=NONE ctermbg=NONE ctermfg=0
 
 hi Conceal cterm=italic ctermbg=NONE ctermfg=darkblue
