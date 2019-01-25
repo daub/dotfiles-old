@@ -5,11 +5,7 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
 " set background=dark
-
-colorscheme nord
-
-hi Comment cterm=italic gui=italic
-hi ColorColumn guibg=#2e3440 guifg=#bf616a ctermbg=black ctermfg=red
+colorscheme frigid
 
 " syntax highlighting
 if !exists("g:syntax_on")
@@ -41,6 +37,8 @@ set scrolloff=5
 " invisibles
 set list
 set listchars=tab:ᐅ\ ,trail:·,nbsp:·
+
+setlocal conceallevel=2
 
 " cursor
 set cursorline
