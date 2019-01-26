@@ -31,7 +31,7 @@ call plug#begin(plugged_dir)
   " Plug 'dracula/vim'
   Plug 'allophane/vim-theme-frigid'
   " Plug '~/dotfiles/tmp/vim-theme-nord'
-  Plug 'chriskempson/base16-vim'
+  " Plug 'chriskempson/base16-vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'ryanoasis/vim-devicons'
@@ -48,6 +48,7 @@ call plug#begin(plugged_dir)
   Plug 'ledger/vim-ledger'
   Plug 'mxw/vim-jsx'
   Plug 'raichoo/purescript-vim'
+  Plug 'chr4/nginx.vim'
   " Linting
   Plug 'w0rp/ale'
   " Editing
