@@ -83,10 +83,11 @@ set scrolloff=5
 set list
 set listchars=tab:ᐅ\ ,trail:·,nbsp:·
 
+set concealcursor=n
 setlocal conceallevel=2
 
 " cursor
-set cursorline
+set nocursorline
 set nostartofline
 
 " keybindings
