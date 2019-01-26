@@ -1,0 +1,1 @@
+f() { fff "$@"; cd "$(cat ~/.cache/fff/.fff_d)"; }

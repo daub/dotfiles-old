@@ -27,7 +27,7 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 ### Files
 
-- file manager - ranger
+- file browser - fff, ranger
 - text editor - vim
 - version control - git
 

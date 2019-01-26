@@ -5,6 +5,7 @@ PACKAGES ?= \
 	buku \
 	dunst \
 	editorconfig \
+	fff \
 	fzf \
 	git \
 	gnupg \

@@ -32,6 +32,11 @@ zplug "carnager/buku_run", \
   use:"buku_run", \
   rename-to:rofi-buku
 
+zplug "dylanaraps/fff", \
+  from:github, \
+  as:command, \
+  use:"fff"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
