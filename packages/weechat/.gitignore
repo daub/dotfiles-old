@@ -1,5 +1,3 @@
 .weechat/**/*.log
 .weechat/logs
 .weechat/sec.conf
-.weechat/python/**/*.py
-.weechat/python/**/notify_send.py
