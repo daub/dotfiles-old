@@ -1,6 +1,6 @@
 # vim
 
-For best fit requires Vim 8+ with *Python* and *Lua* on Linux.
+For best fit requires Vim 8+ on Linux.
 
 ## Key bindings
 
@@ -28,8 +28,14 @@ For best fit requires Vim 8+ with *Python* and *Lua* on Linux.
 #### Files
 
 - `Ctrl-s` - write buffer to file
-- `<leader> [n,b]` - [fuzzy selector](https://github.com/Shougo/denite.nvim) for *files* and *buffers*
+- `<leader> [n,b]` - [fuzzy selector](https://github.com/junegunn/fzf.vim) for *files* and *buffers*
+
+#### Linting
+
+- `[` - previous issue
+- `]` - next issue
+- `\` - issue details
 
 #### Other
 
-- `<leader> =` enter [zen mode](https://github.com/junegunn/goyo.vim)
+- `<leader> =` - enter [zen mode](https://github.com/junegunn/goyo.vim)
