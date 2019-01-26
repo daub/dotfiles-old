@@ -81,8 +81,9 @@ set scrolloff=5
 
 " invisibles
 set list
-set listchars=tab:ᐅ\ ,trail:·,nbsp:·
+set listchars=tab:»\ ,trail:·,nbsp:·
 
+" conceal
 set concealcursor=n
 setlocal conceallevel=2
 
