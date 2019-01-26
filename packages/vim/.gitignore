@@ -3,3 +3,4 @@
 .vim/.netrwhist
 .vim/autoload/plug.vim
 .vim/undo
+.vim/session
