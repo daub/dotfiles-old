@@ -26,14 +26,8 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   " UI
-  " Plug 'blb78/nord-vim'
-  " Plug 'arcticicestudio/nord-vim'
-  " Plug 'dracula/vim'
   Plug 'allophane/vim-theme-frigid'
-  " Plug '~/dotfiles/tmp/vim-theme-nord'
-  " Plug 'chriskempson/base16-vim'
   Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   Plug 'ryanoasis/vim-devicons'
   " Syntax
   Plug 'pangloss/vim-javascript'
@@ -65,6 +59,5 @@ call plug#begin(plugged_dir)
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
   Plug 'christoomey/vim-tmux-navigator'
-  " Plug 'beloglazov/vim-online-thesaurus'
 
 call plug#end()
