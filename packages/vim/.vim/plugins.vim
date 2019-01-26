@@ -29,7 +29,7 @@ call plug#begin(plugged_dir)
   " Plug 'blb78/nord-vim'
   " Plug 'arcticicestudio/nord-vim'
   " Plug 'dracula/vim'
-  Plug '~/Repository/github.com/allophane/vim-theme-frigid'
+  Plug 'allophane/vim-theme-frigid'
   " Plug '~/dotfiles/tmp/vim-theme-nord'
   Plug 'chriskempson/base16-vim'
   Plug 'vim-airline/vim-airline'
