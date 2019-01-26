@@ -49,6 +49,7 @@ call plug#begin(plugged_dir)
   Plug 'mxw/vim-jsx'
   Plug 'raichoo/purescript-vim'
   Plug 'chr4/nginx.vim'
+  Plug 'tbastos/vim-lua'
   " Linting
   Plug 'w0rp/ale'
   " Editing
