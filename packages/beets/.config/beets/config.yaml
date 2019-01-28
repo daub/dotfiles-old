@@ -17,4 +17,3 @@ plugins: edit chroma mpdupdate
 mpd:
   host: localhost
   port: 6600
-
