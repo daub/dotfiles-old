@@ -1,0 +1,2 @@
+export PATH="$HOME/.npm-packages/bin:$PATH"
+export MANPATH="~/.npm-packages/share/man:$MANPATH"

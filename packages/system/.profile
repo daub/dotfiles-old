@@ -1,15 +1,8 @@
-# Source env
-for exportfile in ~/.exports/*; do
-  if [ -f "$exportfile" ]; then
-    source "$exportfile"
-  fi
-done
-
 # Merge in defaults
 userresources=$HOME/.Xresources
 
 if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
+  xrdb -merge "$userresources"
 fi
 
 # Setup keyboard
