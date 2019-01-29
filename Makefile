@@ -3,6 +3,7 @@ PACKAGES ?= \
 	assets \
 	beets \
 	buku \
+	compton \
 	dunst \
 	editorconfig \
 	fff \
