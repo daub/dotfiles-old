@@ -14,7 +14,12 @@ done
 setopt auto_cd
 
 # .zshrc
-source ~/.zshrc.local
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 source ~/.zsh/plugins.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
