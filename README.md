@@ -14,7 +14,7 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 - window manager - i3, Openbox
 - compositor - compton
-- bar - polyar
+- bar - polybar
 - launcher / menu - rofi
 - notifications - dunst
 - widgets -
