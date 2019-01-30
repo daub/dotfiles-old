@@ -9,3 +9,6 @@ fi
 
 # set wallpaper
 hsetroot -solid "#2E3440" -center ~/.local/share/backgrounds/ts-768p.jpg
+
+# disable beep
+xset -b
