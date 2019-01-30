@@ -1,36 +1,13 @@
-#!/bin/bash
-# exit session
+#!/usr/bin/env bash
 
-LOCK="lock"
-LOGOUT="logout $USER"
-SUSPEND="suspend"
-SLEEP="hybrid Sleep"
-HIBERNATE="hibernate"
-REBOOT="reboot"
-SHUTDOWN="shutdown"
-
-CMD=$(echo -e "$LOCK\\n$LOGOUT\\n$SUSPEND\\n$SLEEP\\n$HIBERNATE\\n$REBOOT\\n$SHUTDOWN" | rofi -dmenu -p "session: ")
-case $CMD in
-$LOCK)
-	blurlock
-	;;
-$LOGOUT)
-	i3-msg exit
-	;;
-$SUSPEND)
-	systemctl suspend
-	;;
-$SLEEP)
-	systemctl hybrid-sleep
-	;;
-$HIBERNATE)
-	systemctl hibernate
-	;;
-$REBOOT)
-	shutdown now -r
-	;;
-$SHUTDOWN)
-	shutdown now
-	;;
+ANS=$(echo " Lock| Logout| Reboot| Shutdown" | \
+    rofi -sep "|" -dmenu -i -p 'Session ' "" -width 20 \
+    -hide-scrollbar -eh 1 -line-padding 5 -padding 50 -lines 4)
+case "$ANS" in
+    *Lock) lockscreen -- scrot ;;
+    *Logout) loginctl terminate-session $(loginctl session-status | head -n 1 | awk '{print $1}') ;;
+    *Reboot) systemctl reboot ;;
+    *Shutdown) systemctl poweroff
 esac
+;;
 
