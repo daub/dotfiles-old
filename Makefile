@@ -21,6 +21,7 @@ PACKAGES ?= \
 	ncmpcpp \
 	nitrogen \
 	npm \
+	openbox \
 	pass \
 	polybar \
 	ranger \

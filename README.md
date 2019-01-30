@@ -12,7 +12,7 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 ### Desktop environment
 
-- window manager - i3
+- window manager - i3, Openbox
 - compositor - compton
 - bar - polyar
 - launcher / menu - rofi
