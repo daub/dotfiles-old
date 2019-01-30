@@ -1,0 +1,11 @@
+# .xprofile
+# vim:ft=sh
+# lightdm sources this file at boot
+# as well as our own xinitrc with startx
+
+if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
+    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+fi
+
+# set wallpaper
+hsetroot -solid "#2E3440" -center ~/.local/share/backgrounds/ts-768p.jpg

@@ -1,4 +1,27 @@
+# Set XDG_CONFIG_HOME
+
+export XDG_CONFIG_HOME=$HOME/.config
+
+# Modify PATH
+
+if [ -d "/sbin" ]; then
+    PATH="/sbin:$PATH"
+fi
+
+if [ -d "/usr/sbin" ]; then
+    PATH="/usr/sbin:$PATH"
+fi
+
+if [ -d "$HOME/bin" ]; then
+    PATH=$HOME/bin:$PATH
+fi
+
+if [ -d "$HOME/.scripts" ]; then
+    PATH=$HOME/.scripts:$PATH
+fi
+
 # Merge in defaults
+
 userresources=$HOME/.Xresources
 
 if [ -f "$userresources" ]; then
@@ -21,4 +44,3 @@ if [ -f $usermodmap ]; then
 fi
 
 xcape -e 'Caps_Lock=Escape'
-

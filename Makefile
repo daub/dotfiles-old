@@ -3,6 +3,7 @@ PACKAGES ?= \
 	assets \
 	beets \
 	buku \
+	compton \
 	dunst \
 	editorconfig \
 	fff \
@@ -18,8 +19,8 @@ PACKAGES ?= \
 	mpd \
 	mpv \
 	ncmpcpp \
-	nitrogen \
 	npm \
+	openbox \
 	pass \
 	polybar \
 	ranger \

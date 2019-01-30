@@ -1,3 +1,11 @@
+# Enable vi mode
+bindkey -v
+
+# Navigation
+setopt auto_cd
+
+# Source
+
 for aliasfile in ~/.aliases/*; do
   if [ -f "$aliasfile" ]; then
     source "$aliasfile"
@@ -10,11 +18,13 @@ for functionfile in ~/.functions/*; do
   fi
 done
 
-# Navigation
-setopt auto_cd
-
 # .zshrc
-source ~/.zshrc.local
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 source ~/.zsh/plugins.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
