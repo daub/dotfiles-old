@@ -19,7 +19,6 @@ PACKAGES ?= \
 	mpd \
 	mpv \
 	ncmpcpp \
-	nitrogen \
 	npm \
 	openbox \
 	pass \
