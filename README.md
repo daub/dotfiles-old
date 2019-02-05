@@ -48,7 +48,16 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 - video player - mpv
 - PDF viewer - zathura
 
-### Personal
+### Misc.
 
-- music collection - beets
-- accounting - ledger
+- music collection - [beets][beets-link]
+- accounting - [ledger][ledger-link]
+- http client - [HTTPie][httpie-link]
+- http server - [serve][serve-link-npm]
+- torrent client - [peerflix][peerflix-link-github]
+
+[beets-link]: http://beets.io/
+[peerflix-link-github]: https://github.com/mafintosh/peerflix
+[ledger-link]: https://www.ledger-cli.org/
+[httpie-link]: https://httpie.org/
+[serve-link-npm]: https://www.npmjs.com/package/serve
