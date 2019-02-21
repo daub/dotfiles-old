@@ -59,23 +59,15 @@ tray-detached = true
 ;wm-restack = bspwm
 wm-restack = i3
 
-[bar/top]
-monitor = ${env:MONITOR:eDP-1}
-inherit = bar/common
-
-modules-left = i3
-modules-center = title
-modules-right =  xkeyboard wired-network wireless-network battery date
-
 [bar/bottom]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:eDP-1}
 inherit = bar/common
 
 bottom = true
 
-modules-left = mpd-controls
-modules-center = mpd
-modules-right =  pulseaudio-rofi-output
+modules-left = i3
+modules-center = title
+modules-right =  xkeyboard wired-network wireless-network battery date
 
 [module/title]
 type = internal/xwindow
