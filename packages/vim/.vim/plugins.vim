@@ -46,6 +46,9 @@ call plug#begin(plugged_dir)
   Plug 'tbastos/vim-lua'
   " Linting
   Plug 'w0rp/ale'
+  " Snippets
+  Plug 'SirVer/ultisnips'
+  Plug 'honza/vim-snippets'
   " Editing
   Plug 'scrooloose/nerdcommenter'
   Plug 'ConradIrwin/vim-bracketed-paste'
