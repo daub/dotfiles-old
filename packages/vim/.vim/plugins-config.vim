@@ -28,3 +28,8 @@ nmap <silent> <Leader>d <Plug>(jsdoc)
 
 " move
 let g:move_key_modifier = 'C'
+
+" snips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
