@@ -94,7 +94,7 @@ scroll-down = ~/.config/polybar/scripts/pulseaudio.sh --volume_down
 
 type = internal/i3
 
-pin-workspaces = true
+; pin-workspaces = true
 ;
 ;strip-wsnumbers = true
 ;
