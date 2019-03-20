@@ -20,16 +20,16 @@ zplug "junegunn/fzf-bin", \
   from:github, \
   rename-to:"fzf"
 
-zplug "jarun/Buku", \
-  from:github, \
-  as:command, \
-  use:"buku"
-
-zplug "carnager/buku_run", \
-  from:github, \
-  as:command, \
-  use:"buku_run", \
-  rename-to:rofi-buku
+# zplug "jarun/Buku", \
+#   from:github, \
+#   as:command, \
+#   use:"buku"
+#
+# zplug "carnager/buku_run", \
+#   from:github, \
+#   as:command, \
+#   use:"buku_run", \
+#   rename-to:rofi-buku
 
 zplug "dylanaraps/fff", \
   from:github, \
