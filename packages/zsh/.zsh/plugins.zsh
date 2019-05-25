@@ -31,6 +31,10 @@ zplug "junegunn/fzf-bin", \
 #   use:"buku_run", \
 #   rename-to:rofi-buku
 
+zplug filipekiss/zemojify, \
+  as:"command", \
+  rename-to:emojify
+
 zplug "dylanaraps/fff", \
   from:github, \
   as:command, \

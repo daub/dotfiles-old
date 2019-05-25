@@ -1,6 +1,6 @@
 [alias]
-  l = log --oneline
-  lg = log --oneline --graph --decorate
+  l = ! git log --oneline --color | emojify | less -r
+  lg = ! git log --oneline --graph --decorate --color | emojify | less -r
   s = status -s
   #
   cm = commit -m
