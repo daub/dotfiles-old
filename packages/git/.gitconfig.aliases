@@ -1,6 +1,6 @@
 [alias]
-  l = ! git log --oneline --color | emojify | less -r
-  lg = ! git log --oneline --graph --decorate --color | emojify | less -r
+  l = ! git log --oneline --color | emojify | less -RFe
+  lg = ! git log --oneline --graph --decorate --color | emojify | less -RFe
   s = status -s
   #
   cm = commit -m
@@ -21,4 +21,3 @@
   #
   mnf = merge --no-ff
   d = difftool
-
