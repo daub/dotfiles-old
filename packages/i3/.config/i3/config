@@ -59,9 +59,11 @@ bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
+bindsym XF86LaunchA exec "rofi-pass"
+
 # Start Applications
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+b exec firefox
+bindsym $mod+b exec chrome
 bindsym $mod+Shift+b exec firefox --private-window
 bindsym $mod+f exec termite -e ranger
 # bindsym $mod+Shift+F3 exec gksu pcmanfm
