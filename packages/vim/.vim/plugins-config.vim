@@ -33,3 +33,6 @@ let g:move_key_modifier = 'C'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Emoji
+set completefunc=emoji#complete
