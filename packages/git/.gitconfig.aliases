@@ -1,0 +1,23 @@
+[alias]
+  l = ! git log --oneline --color | emojify | less -RFe
+  lg = ! git log --oneline --graph --decorate --color | emojify | less -RFe
+  s = status -s
+  #
+  cm = commit -m
+  cam = commit -a -m
+  #
+  save = !git add -A && git commit -m "CHECKPOINT"
+  wip = commit -am ":construction:"
+  #
+  undo = reset HEAD~1 --mixed
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  #
+  co = checkout
+  cob = checkout -b
+  br = branch
+  brd = branch -d
+  # Amend the currently staged files to the latest commit
+  amend = commit --amend --reuse-message=HEAD
+  #
+  mnf = merge --no-ff
+  d = difftool

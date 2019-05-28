@@ -5,8 +5,8 @@ let g:webdevicons_enable_airline_tabline = 0
 let g:webdevicons_enable_airline_statusline = 1
 
 let g:javascript_plugin_flow      = 1
-let g:javascript_conceal_function = "ƒ"
-let g:javascript_conceal_null     = "ø"
+" let g:javascript_conceal_function = "ƒ"
+" let g:javascript_conceal_null     = "ø"
 
 " nerdcommenter
 let g:NERDSpaceDelims = 1
@@ -33,3 +33,6 @@ let g:move_key_modifier = 'C'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Emoji
+set completefunc=emoji#complete

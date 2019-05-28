@@ -25,6 +25,7 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
+  Plug 'junegunn/vim-emoji'
   " UI
   Plug 'allophane/vim-theme-frigid'
   Plug 'vim-airline/vim-airline'
@@ -44,6 +45,7 @@ call plug#begin(plugged_dir)
   Plug 'raichoo/purescript-vim'
   Plug 'chr4/nginx.vim'
   Plug 'tbastos/vim-lua'
+  Plug 'jparise/vim-graphql'
   " Linting
   Plug 'w0rp/ale'
   " Snippets

@@ -56,14 +56,16 @@ bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
 ################################################################################################
 
 # Screen brightness controls
-# bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-# bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+
+bindsym XF86LaunchA exec "rofi-pass"
 
 # Start Applications
 # bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox
-bindsym $mod+Shift+F2 exec firefox --private-window
-bindsym $mod+F3 exec termite -e ranger
+bindsym $mod+b exec chrome
+bindsym $mod+Shift+b exec firefox --private-window
+bindsym $mod+f exec termite -e ranger
 # bindsym $mod+Shift+F3 exec gksu pcmanfm
 # bindsym $mod+F5 exec terminal -e 'mocp'
 # bindsym $mod+t exec --no-startup-id pkill compton
@@ -157,6 +159,16 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 
+workspace 1 output primary
+workspace 2 output primary
+workspace 3 output primary
+workspace 4 output HDMI2 VGA
+workspace 5 output HDMI2 VGA
+workspace 6 output HDMI2 VGA
+workspace 7 output primary
+workspace 8 output primary
+workspace 9 output primary
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -200,8 +212,8 @@ bindsym XF86Search exec rofi-surfraw
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
-assign [window_role="devenv"] $ws2
-assign [class="Firefox Developer Edition"] $ws2
+# assign [window_role="devenv"] $ws2
+# assign [class="Firefox Developer Edition"] $ws2
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1

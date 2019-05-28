@@ -2,3 +2,5 @@
 .weechat/logs
 .weechat/sec.conf
 .weechat/python
+.local
+!.local/share/icons/hicolor/32x32/apps/weechat.png

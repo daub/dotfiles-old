@@ -1,5 +1,6 @@
 [include]
   path = ~/.gitconfig.local
+  path = ~/.gitconfig.aliases
 
 [core]
   editor = vim
@@ -15,24 +16,6 @@
   added = green bold
   changed = yellow bold
   untracked = red bold
-
-[alias]
-  l = log --oneline
-  lg = log --oneline --graph --decorate
-  s = status -s
-  #
-  cm = commit -m
-  cam = commit -a -m
-  #
-  co = checkout
-  cob = checkout -b
-  br = branch
-  brd = branch -d
-  # Amend the currently staged files to the latest commit
-  amend = commit --amend --reuse-message=HEAD
-  #
-  mnf = merge --no-ff
-  d = difftool
 
 [push]
   default = simple

@@ -4,3 +4,6 @@ alias mpeer='peerflix --mpv'
 # Play audio from youtube (supports lists)
 alias mpyt='mpv --ytdl-raw-options=extract-audio=,audio-format=mp3,audio-quality=0'
 
+# Show webcam
+alias mp-cam='mpv --demuxer-lavf-format video4linux2 --demuxer-lavf-o-set input_format=mjpeg /dev/video0'
+
