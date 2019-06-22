@@ -33,3 +33,6 @@
   prompt = false
 
 [commit]
+
+[branch]
+  autosetuprebase = always

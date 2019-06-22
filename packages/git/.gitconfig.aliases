@@ -1,6 +1,12 @@
 [alias]
-  l = ! git log --oneline --color | emojify | less -RFe
+  l = ! git log --oneline --color
   lg = ! git log --oneline --graph --decorate --color | emojify | less -RFe
+
+  fulllog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # A log of commits indicating where various branches are currently pointing.
+  lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --branches --remotes
+
+  #
   s = status -s
   #
   cm = commit -m
