@@ -19,6 +19,8 @@ call plug#begin(plugged_dir)
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-vinegar'
+  Plug 'tpope/vim-rails'
+
   " From junegunn
   Plug 'junegunn/vim-easy-align'
   Plug 'junegunn/fzf', { 'do': './install --all' }
@@ -26,10 +28,12 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/vim-emoji'
+
   " UI
   Plug 'allophane/vim-theme-frigid'
   Plug 'vim-airline/vim-airline'
   Plug 'ryanoasis/vim-devicons'
+
   " Syntax
   Plug 'pangloss/vim-javascript'
   Plug 'heavenshell/vim-jsdoc'
@@ -46,8 +50,11 @@ call plug#begin(plugged_dir)
   Plug 'chr4/nginx.vim'
   Plug 'tbastos/vim-lua'
   Plug 'jparise/vim-graphql'
+  Plug 'vim-ruby/vim-ruby'
   " Linting
   Plug 'w0rp/ale'
+  " Git
+  Plug 'rhysd/git-messenger.vim'
   " Snippets
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
@@ -60,6 +67,7 @@ call plug#begin(plugged_dir)
   Plug 'matze/vim-move'
   Plug 'kshenoy/vim-signature'
   " Misc
+  Plug 'ron89/thesaurus_query.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
