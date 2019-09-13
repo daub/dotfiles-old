@@ -5,6 +5,9 @@ path=(~/bin:~/.local/bin $path)
 typeset -U fpath
 fpath=(~/.zsh/functions, $fpath)
 
+typeset -U fpath
+fpath=(~/.gem/ruby/2.6.0/bin, $fpath)
+
 export KEYTIMEOUT=1
 
 # make zsh/terminfo work for terms with application and cursor modes

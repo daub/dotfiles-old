@@ -51,6 +51,7 @@ call plug#begin(plugged_dir)
   Plug 'tbastos/vim-lua'
   Plug 'jparise/vim-graphql'
   Plug 'vim-ruby/vim-ruby'
+  Plug 'tikhomirov/vim-glsl'
   " Linting
   Plug 'w0rp/ale'
   " Git

@@ -60,7 +60,7 @@ tray-detached = true
 wm-restack = i3
 
 [bar/bottom]
-monitor = ${env:MONITOR:eDP-1}
+; monitor = ${env:MONITOR:eDP-1}
 inherit = bar/common
 
 bottom = true
