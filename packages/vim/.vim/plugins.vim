@@ -52,6 +52,7 @@ call plug#begin(plugged_dir)
   Plug 'jparise/vim-graphql'
   Plug 'vim-ruby/vim-ruby'
   Plug 'tikhomirov/vim-glsl'
+  Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
   " Linting
   Plug 'w0rp/ale'
   " Git
