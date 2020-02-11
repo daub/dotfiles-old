@@ -1,5 +1,5 @@
 " " Theme
-let g:airline_theme='frigid'
+let g:airline_theme='nord'
 
 " Extensions
 let g:airline#extensions#tabline#enabled = 1

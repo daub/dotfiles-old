@@ -30,9 +30,10 @@ call plug#begin(plugged_dir)
   Plug 'junegunn/vim-emoji'
 
   " UI
-  Plug 'allophane/vim-theme-frigid'
+  "Plug 'allophane/vim-theme-frigid'
+  Plug 'arcticicestudio/nord-vim'
   Plug 'vim-airline/vim-airline'
-  Plug 'ryanoasis/vim-devicons'
+
 
   " Syntax
   Plug 'pangloss/vim-javascript'
@@ -74,5 +75,6 @@ call plug#begin(plugged_dir)
   Plug 'jamessan/vim-gnupg'
   Plug 'mhinz/vim-startify'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
