@@ -54,6 +54,7 @@ call plug#begin(plugged_dir)
   Plug 'vim-ruby/vim-ruby'
   Plug 'tikhomirov/vim-glsl'
   Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do':  'make fsautocomplete' }
+  Plug 'cespare/vim-toml' "| Plug 'maralla/vim-toml-enhance'
   " Linting
   Plug 'w0rp/ale'
   " Git

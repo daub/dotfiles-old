@@ -1,12 +1,13 @@
 setopt histignoredups
-HISTFILE="$HOME/.zhistory"
-HISTSIZE=10000000
-SAVEHIST=10000000
 setopt append_history
 setopt hist_expire_dups_first
 setopt hist_ignore_space
 setopt inc_append_history
 setopt share_history
+
+HISTFILE="$HOME/.zhistory"
+HISTSIZE=10000000
+SAVEHIST=10000000
 
 # fix zsh annoying history behavior
 h() { if [ -z "$*" ]; then history 1; else history 1 | egrep "$@"; fi; }
