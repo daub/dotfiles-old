@@ -4,6 +4,7 @@
 #clickable_url = true
 #dynamic_title = true
 font = DejaVuSansMono Nerd Font 14
+cell_height_scale = 1.2
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
