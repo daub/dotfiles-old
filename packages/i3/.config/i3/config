@@ -27,19 +27,6 @@ font xft:URWGothic-Book 12
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite -e "tmux"
-
-bindsym $mod+Shift+d exec termite -e "tmux" -r devenv
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# start program launcher
-# bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+space exec --no-startup-id "rofi -modi drun,run -show drun"
-
 # launch categorized menu
 # bindsym $mod+z exec --no-startup-id morc_menu
 
@@ -47,61 +34,18 @@ bindsym $mod+space exec --no-startup-id "rofi -modi drun,run -show drun"
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec termite -e 'alsamixer'
+
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
 
-# Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
 bindsym XF86LaunchA exec "rofi-pass"
-
-# Start Applications
-# bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+b exec chrome
-bindsym $mod+Shift+b exec firefox --private-window
-bindsym $mod+f exec termite -e ranger
-# bindsym $mod+Shift+F3 exec gksu pcmanfm
-# bindsym $mod+F5 exec terminal -e 'mocp'
-# bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
 bindsym $mod+Ctrl+Delete --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
-
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
@@ -117,17 +61,6 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle fullscreen mode for the focused container
-bindsym $mod+equal fullscreen toggle
-
-# toggle tiling / floating
-bindsym $mod+o floating toggle
-# toggle float on bottom-right
-bindsym $mod+Shift+o floating toggle; exec --no-startup-id i3-bottomright
-
-# change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
-
 # toggle sticky
 bindsym $mod+Shift+s sticky toggle
 
@@ -140,10 +73,6 @@ bindsym $mod+a focus parent
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 # bindsym $mod+0 scratchpad show; floating toggle
-
-#navigate workspaces next / previous
-bindsym $mod+Ctrl+l workspace next
-bindsym $mod+Ctrl+h workspace prev
 
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
@@ -169,28 +98,6 @@ workspace 7 output primary
 workspace 8 output primary
 workspace 9 output primary
 
-# switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-
-# Move focused container to workspace
-bindsym $mod+Ctrl+1 move container to workspace $ws1
-bindsym $mod+Ctrl+2 move container to workspace $ws2
-bindsym $mod+Ctrl+3 move container to workspace $ws3
-bindsym $mod+Ctrl+4 move container to workspace $ws4
-bindsym $mod+Ctrl+5 move container to workspace $ws5
-bindsym $mod+Ctrl+6 move container to workspace $ws6
-bindsym $mod+Ctrl+7 move container to workspace $ws7
-bindsym $mod+Ctrl+8 move container to workspace $ws8
-bindsym $mod+Ctrl+9 move container to workspace $ws9
-
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
@@ -202,18 +109,7 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
-
 bindsym XF86Search exec rofi-surfraw
-# Open applications on specific workspaces
-# assign [class="Firefox"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
-# assign [window_role="devenv"] $ws2
-# assign [class="Firefox Developer Edition"] $ws2
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -238,34 +134,13 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
+# for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 # for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [title=".*Emulator.*"] floating enable
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
-
-#
-# # First I have a tmux window used for background scripts.
-# # I'll later bind this to mod+u.
-# for_window [title="quake"] floating enable
-# for_window [title="quake"] resize set 640 460
-# for_window [title="quake"] move scratchpad
-# for_window [title="quake"] border pixel 2
-# # Runs the tmuxinit script, which searches for an earlier tmux title,
-# # otherwise starts a new one (to prevent multiple dropdown sessions).
-# exec_always --no-startup-id termite -t quake
-#
-# bindsym $mod+t [title="quake"] scratchpad show; [title="quake"] move position center
-#
-
-for_window [title="dropdown-music"] floating enable
-for_window [title="dropdown-music"] resize set 640 460
-for_window [title="dropdown-music"] border pixel 2
-
-bindsym $mod+m exec --no-startup-id termite -t dropdown-music -e ncmpcpp
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -299,19 +174,10 @@ mode "resize" {
 }
 
 # Autostart applications
+exec --no-startup-id sxhkd;
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-# exec --no-startup-id nm-applet
-# exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id pamac-tray
-# exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id polybar-launch
-
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
