@@ -39,7 +39,7 @@ Check [INSTALL.md](./INSTALL.md) for installation instructions.
 
 ### Communication
 
-- email client - 
+- email client -
 - chat client - WeeChat
 
 ### Media

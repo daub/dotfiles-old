@@ -32,4 +32,3 @@ for exportfile in ~/.exports/*; do
     source "$exportfile"
   fi
 done
-

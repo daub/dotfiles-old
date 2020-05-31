@@ -7,7 +7,7 @@ bind Space send-prefix
 bind-key \; command-prompt
 
 # windows
-bind c new-window -c "#{pane_current_path}"
+bind-key -n M-'Enter' new-window -c "#{pane_current_path}"
 
 # panes
 bind-key -n M-'\' split-window -h -c '#{pane_current_path}'
@@ -17,7 +17,7 @@ unbind %
 
 unbind =
 unbind z
-bind = resize-pane -Z
+bind-key -n M-f resize-pane -Z
 
 # switch windows alt+number
 bind-key -n M-1 select-window -t 1

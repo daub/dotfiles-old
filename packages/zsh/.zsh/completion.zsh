@@ -1,3 +1,5 @@
+autoload -U compinit && compinit
+
 # Case-insensitive completion
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*' auto-description 'specify: %d'

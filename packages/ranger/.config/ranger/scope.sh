@@ -95,9 +95,11 @@ handle_image() {
 
         # Image
         image/*)
+          # kitty +kitten icat "${FILE_PATH}" && exit 7
+          exit 1;;
             # `w3mimgdisplay` will be called for all images (unless overriden as above),
             # but might fail for unsupported types.
-            exit 7;;
+            # exit 7;;
 
         # Video
         # video/*)

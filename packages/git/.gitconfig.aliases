@@ -1,33 +1,89 @@
 [alias]
+  # Add
   ap = add -p
 
-  l = ! git log --oneline --color
-  lg = ! git log --oneline --graph --decorate --color | emojify | less -RFe
-  # A log of commits indicating where various branches are currently pointing.
-  lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative --branches --remotes
-  fulllog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # Branch
+  b = branch
+  bm = branch --move
+  bd = branch --delete
+  bav = branch --all --verbose
 
-  #
-  s = status -s
+  # Commit
+  c = commit
+  ca = commit --all
+  cm = commit -m
+  cam = commit -am
+  cem = commit --allow-empty -m
+  cd = commit --amend
+  cad = commit --all --amend
+  cadne = commit --all --amend --no-edit
 
-  #
+  # Checkout
+  co = checkout
+  cob = checkout -b
+
+  # Cherry-pick
+  cp = cherry-pick
+  cpa = cherry-pick --abort
+  cpc = cherry-pick --continue
+  cps = cherry-pick --skip
+
+  # Diff
+  d = diff
   dc = diff --cached
 
-  cm = commit -m
-  cam = commit -a -m
+  # Fetch
+
+  # Log
+  l = log --oneline --color
+  lg = log --oneline --graph --decorate --color
+  lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
   #
+  ls = ls-files
+  lsm = ls-files --modified
+
+  # Merge
+  mnf = merge --no-ff
+
+  # Push
+  pso = push origin
+  psof = push --force origin
+
+  # Rebase
+  rb = rebase
+  rbi = rebase --interactive
+  rbir = rebase --interactive --root
+  rbim = rebase --interactive master
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbs = rebase --skip
+
+  # Reset
+  rs = reset
+  rsh = reset --hard
+
+  # Remote
+
+  # Status
+  s = status -s
+
+  # Stash
+
+  # Misc.
+  aliases = !git config -l | grep alias | cut -c 7- # List git aliases
+  branches = branch --all 								  	# List both remote-tracking branches and local branches.
+  remotes = remote --verbose 							  	# Be a little more verbose and show remote url after name.
+  contributors = shortlog --summary --numbered  	# List contributors with number of commits
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"   	# Find commits by commit message
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"  	# Remove branches that have already been merged with master (a.k.a. ‘delete merged’)
   save = !git add -A && git commit -m "CHECKPOINT"
   wip = commit -am ":construction:"
   #
   undo = reset HEAD~1 --mixed
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
-  #
-  co = checkout
-  cob = checkout -b
-  br = branch
-  brd = branch -d
   # Amend the currently staged files to the latest commit
   amend = commit --amend --reuse-message=HEAD
+  amend2 = commit --amend --no-edit				  	# Amend the currently staged files to the latest commit.
   #
-  mnf = merge --no-ff
   d = difftool

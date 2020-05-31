@@ -27,6 +27,8 @@ source ~/.zsh/plugins.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
 
+eval "$(starship init zsh)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # added by travis gem

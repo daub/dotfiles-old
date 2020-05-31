@@ -10,10 +10,16 @@ zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/fancy-ctrl-z", from:oh-my-zsh
 
 zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", \
-  use:pure.zsh, \
-  from:github, \
-  as:theme
+# zplug "sindresorhus/pure", \
+#   use:pure.zsh, \
+#   from:github, \
+#   as:theme
+
+# zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+
+zplug "agkozak/zsh-z"
+
+zplug "Tarrasch/zsh-autoenv"
 
 zplug "junegunn/fzf-bin", \
   as:command, \
@@ -31,9 +37,9 @@ zplug "junegunn/fzf-bin", \
 #   use:"buku_run", \
 #   rename-to:rofi-buku
 
-zplug filipekiss/zemojify, \
-  as:"command", \
-  rename-to:emojify
+# zplug filipekiss/zemojify, \
+#   as:"command", \
+#   rename-to:emojify
 
 zplug "dylanaraps/fff", \
   from:github, \

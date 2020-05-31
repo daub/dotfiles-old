@@ -3,7 +3,7 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = DejaVuSansMono Nerd Font 14
+font = FiraCode Nerd Font Mono 14
 cell_height_scale = 1.2
 #fullscreen = true
 #geometry = 640x480

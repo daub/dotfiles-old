@@ -3,8 +3,9 @@
   path = ~/.gitconfig.aliases
 
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.gitignore-global
+  pager = diff-so-fancy | less --tabs=4 -RFX
 
 [diff]
   tool = vimdiff
@@ -16,6 +17,21 @@
   added = green bold
   changed = yellow bold
   untracked = red bold
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red reverse
+  newNormal = green
+  newHighlight = green reverse
+
+[color "diff"]
+  meta = 11
+  frag = magenta italic
+  commit = yellow
+  old = red
+  new = green
+  whitespace = red reverse
+  autosetuprebase = always
 
 [push]
   default = simple
@@ -35,4 +51,3 @@
 [commit]
 
 [branch]
-  autosetuprebase = always

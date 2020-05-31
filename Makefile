@@ -7,13 +7,13 @@ PACKAGES ?= \
 	dunst \
 	editorconfig \
 	fff \
+	firefox \
 	fzf \
 	git \
 	gnupg \
 	highlight \
 	i3 \
 	ledger \
-	misc \
 	misc \
 	mpc \
 	mpd \
