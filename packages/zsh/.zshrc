@@ -30,6 +30,3 @@ source ~/.zsh/completion.zsh
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# added by travis gem
-[ -f /home/mushegha/.travis/travis.sh ] && source /home/mushegha/.travis/travis.sh
