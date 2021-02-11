@@ -1,0 +1,13 @@
+configuration {
+	lines: 8;
+	font: "Fira Code Retina 13";
+	case-sensitive: false;
+	auto-select: false;
+	matching: "fuzzy";
+	tokenize: true;
+	theme: "themes/nord";
+	kb-remove-to-eol: "Control+K";
+	kb-accept-entry: "Control+l,Control+m,Return,KP_Enter";
+	kb-row-up: "Up,Control+p,ISO_Left_Tab,Control+k";
+	kb-row-down: "Down,Control+n,Control+j";
+}
