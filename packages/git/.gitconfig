@@ -51,3 +51,5 @@
 [commit]
 
 [branch]
+[pull]
+	rebase = true
