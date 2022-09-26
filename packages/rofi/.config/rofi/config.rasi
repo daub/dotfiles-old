@@ -1,13 +1,19 @@
 configuration {
 	lines: 8;
-	font: "Fira Code Retina 13";
+	font: "Fira Code Retina 14";
 	case-sensitive: false;
 	auto-select: false;
 	matching: "fuzzy";
 	tokenize: true;
-	theme: "themes/nord";
 	kb-remove-to-eol: "Control+K";
-	kb-accept-entry: "Control+l,Control+m,Return,KP_Enter";
+	kb-accept-entry: "Control+m,Return,KP_Enter";
 	kb-row-up: "Up,Control+p,ISO_Left_Tab,Control+k";
 	kb-row-down: "Down,Control+n,Control+j";
 }
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+@theme "./themes/nord.rasi"

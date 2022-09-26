@@ -28,5 +28,6 @@ source ~/.zsh/history.zsh
 source ~/.zsh/completion.zsh
 
 eval "$(starship init zsh)"
+RPROMPT="%1(j.✦.)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

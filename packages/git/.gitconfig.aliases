@@ -3,9 +3,9 @@
   ap = add -p
 
   # Branch
-  b = branch
-  bm = branch --move
-  bd = branch --delete
+  br = branch
+  brm = branch --move
+  brd = branch --delete
   bav = branch --all --verbose
 
   # Commit
@@ -48,13 +48,14 @@
 
   # Push
   pso = push origin
-  psof = push --force origin
+  psoh = push origin HEAD
+  psof = push origin --force
 
   # Rebase
   rb = rebase
-  rbi = rebase --interactive
-  rbir = rebase --interactive --root
-  rbim = rebase --interactive master
+  ri = rebase --interactive
+  rir = rebase --interactive --root
+  rim = rebase --interactive main
   rba = rebase --abort
   rbc = rebase --continue
   rbs = rebase --skip
@@ -77,6 +78,8 @@
   contributors = shortlog --summary --numbered  	# List contributors with number of commits
   fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"   	# Find commits by commit message
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"  	# Remove branches that have already been merged with master (a.k.a. ‘delete merged’)
+  up = pull --rebase --prune
+
   save = !git add -A && git commit -m "CHECKPOINT"
   wip = commit -am ":construction:"
   #

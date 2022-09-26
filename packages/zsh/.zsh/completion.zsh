@@ -22,3 +22,8 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
+
+# Autosuggestion
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+bindkey '^ ' autosuggest-execute
+

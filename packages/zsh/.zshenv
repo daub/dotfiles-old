@@ -20,6 +20,9 @@ case "$TERM" in
     ;;
 esac
 
+# ssh agend
+SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # backspace
 if [[ -n $terminfo[kbs] ]]; then
   bindkey          "$terminfo[kbs]"   backward-delete-char
@@ -32,3 +35,4 @@ for exportfile in ~/.exports/*; do
     source "$exportfile"
   fi
 done
+

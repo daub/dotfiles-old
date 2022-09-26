@@ -31,7 +31,6 @@ PACKAGES ?= \
 	system \
 	termite \
 	tmux \
-	vim \
 	vimb \
 	weechat \
 	youtube-dl \

@@ -5,9 +5,14 @@ fi
 
 source $ZPLUG_HOME/init.zsh
 
+
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/fancy-ctrl-z", from:oh-my-zsh
+
+zplug "zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
+# zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
 
 zplug "mafredri/zsh-async", from:github
 # zplug "sindresorhus/pure", \

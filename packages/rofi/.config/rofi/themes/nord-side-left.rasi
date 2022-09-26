@@ -150,3 +150,8 @@ element alternate.active {
   background-color: @active-background;
   text-color:       @active-foreground;
 }
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
